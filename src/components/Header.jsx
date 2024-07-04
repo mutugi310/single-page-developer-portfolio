@@ -14,9 +14,9 @@ function Header() {
                 <p className='text-2xl text-center'>adamkeyes</p>
                 <div className='flex justify-evenly sm:gap-4  '>
                     <FaGithub className='size size-4 sm:size-6'></FaGithub>
-                    <FaMedium ></FaMedium >
-                    <FaLinkedin></FaLinkedin>
-                    <FaXTwitter></FaXTwitter> 
+                    <FaMedium className='size size-4 sm:size-6'></FaMedium >
+                    <FaLinkedin className='size size-4 sm:size-6'></FaLinkedin>
+                    <FaXTwitter className='size size-4 sm:size-6'></FaXTwitter> 
                 </div>
             </div>
             <div className='flex flex-col flex-nowrap relative -top-[4.5rem] sm:flex-row-reverse justify-center sm:-top-12 sm:right-0'>
