@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaGithub, FaMedium, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 function Footer() {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+ 
   return (
     <footer className='bg-black-light'>
       <div className='container mx-auto  divide-y-2 px-4 sm:px-15 lg:px-32'>
@@ -18,10 +22,14 @@ function Footer() {
             <form action="" className='w-full ' >
               <input type="text" 
                 name="" id="" placeholder='Name' 
+                value={name}
+                onChange={(e)=>setName(e.target.value) }
                 className='bg-black-light py-4 w-full border-b-white border-b-2 pl-4 
                 focus:border-b-green focus:outline-none '/> <br />
               <input type="email" 
                 name="" id="" placeholder='Email' 
+                value={email}
+                onChange={(e)=>setEmail(e.target.value) }
                 className='bg-black-light peer  py-4 w-full border-b-white border-b-2 mt-4 pl-4 
                 focus:border-b-green focus:outline-none  invalid:border-b- invalid:border-b-2 invalid:text-[#FF6F5B]
                 ' /> <br />
@@ -30,13 +38,16 @@ function Footer() {
                   </p>
               <textarea 
                 name="" id="" placeholder='Message' 
+                value={message}
+                onChange={(e)=>setMessage(e.target.value) }
                 className='bg-black-light py-4 w-full border-b-white border-b-2 mt-4 pl-4
                 focus:border-b-green focus:outline-none  ' >
               </textarea> 
               <br />
               <div className='flex justify-end'>
-                <button type="submit" className='uppercase border-b-2 w-fit border-green my-2 
-                hover:text-green hover:font-bold'>
+                <button type="submit" 
+                  onClick={()=> { alert(`${name} ${email} ${message}`)}} 
+                  className='uppercase border-b-2 w-fit border-green my-2 hover:text-green hover:font-bold'>
                   Send Message
                 </button>
               </div>
