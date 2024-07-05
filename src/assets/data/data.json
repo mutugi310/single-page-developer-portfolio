@@ -1,0 +1,36 @@
+{
+    "skills": [
+        {
+            "name": "HTML",
+            "experienceYrs": 3
+        },
+        {
+            "name": "CSS",
+            "experienceYrs": 3
+        },
+        {
+            "name": "JavaScript",
+            "experienceYrs": 2
+        },
+        {
+            "name": "Accessibility",
+            "experienceYrs": 3
+        },
+        {
+            "name": "React",
+            "experienceYrs": 1
+        },
+        {
+            "name": "Sass",
+            "experienceYrs": 1
+        }
+    ],
+    "projects": [
+        {
+            "name": "Project1",
+            "gitHub": "https://github.com/user/project1",
+            "hosted": "https://project1.com",
+            "techStack": "React, Node.js"
+        }
+    ]
+}
