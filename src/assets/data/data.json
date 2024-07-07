@@ -1,36 +1,66 @@
 {
-    "skills": [
-        {
-            "name": "HTML",
-            "experienceYrs": 3
-        },
-        {
-            "name": "CSS",
-            "experienceYrs": 3
-        },
-        {
-            "name": "JavaScript",
-            "experienceYrs": 2
-        },
-        {
-            "name": "Accessibility",
-            "experienceYrs": 3
-        },
-        {
-            "name": "React",
-            "experienceYrs": 1
-        },
-        {
-            "name": "Sass",
-            "experienceYrs": 1
-        }
-    ],
-    "projects": [
-        {
-            "name": "Project1",
-            "gitHub": "https://github.com/user/project1",
-            "hosted": "https://project1.com",
-            "techStack": "React, Node.js"
-        }
-    ]
+  "skills": [
+    {
+      "name": "HTML",
+      "experienceYrs": 3
+    },
+    {
+      "name": "CSS",
+      "experienceYrs": 3
+    },
+    {
+      "name": "JavaScript",
+      "experienceYrs": 2
+    },
+    {
+      "name": "Accessibility",
+      "experienceYrs": 3
+    },
+    {
+      "name": "React",
+      "experienceYrs": 1
+    },
+    {
+      "name": "Sass",
+      "experienceYrs": 1
+    }
+  ],
+  "projects": [
+    {
+      "name": "Design portfolio",
+      "gitHub": "https://github.com/user/project1",
+      "hosted": "https://project1.com",
+      "techStack": "React, Node.js"
+    },
+    {
+      "name": "Project2",
+      "gitHub": "https://github.com/user/project1",
+      "hosted": "https://project1.com",
+      "techStack": "React, Node.js"
+    },
+    {
+      "name": "Project3",
+      "gitHub": "https://github.com/user/project1",
+      "hosted": "https://project1.com",
+      "techStack": "React, Node.js"
+    },
+    {
+      "name": "Project4",
+      "gitHub": "https://github.com/user/project1",
+      "hosted": "https://project1.com",
+      "techStack": "React, Node.js"
+    },
+    {
+      "name": "Project5",
+      "gitHub": "https://github.com/user/project1",
+      "hosted": "https://project1.com",
+      "techStack": "React, Node.js"
+    },
+    {
+      "name": "Project6",
+      "gitHub": "https://github.com/user/project1",
+      "hosted": "https://project1.com",
+      "techStack": "React, Node.js"
+    }
+  ]
 }
