@@ -3,6 +3,7 @@ import Skill from "./mainComponents/Skill";
 import data from "../assets/data/data.json";
 import testProjectImg from "../assets/testProject.jpg";
 import Button from "./sharedComponents/Button";
+import Project from "./mainComponents/Project";
 
 function Main() {
   return (
@@ -20,19 +21,19 @@ function Main() {
 
         <section className="py-10">
           <h2>Project</h2>
-          <div className="flex flex-col  gap-4 py-8 justify-between flex-nowrap sm:flex-row ">
-            <article className=" w-full grow relative group sm:w-1/3 ">
+          <div className="grid grid-cols-1  gap-4 py-8  flex-wrap sm:grid-cols-2 ">
+            {/* <article className=" relative group py-4 ">
               <img
                 src={testProjectImg}
                 alt="project name"
-                className="w-full group/first"
+                className="w-full "
               />
               <h3 className="py-2">Design portfolio</h3>
               <div className="flex gap-2">
                 <p>HTML</p>
                 <p>CSS</p>
               </div>
-              <div className="flex-1 gap-3 lg:flex-col lg:hidden lg:group-hover:flex lg:absolute lg:justify-center lg:items-center lg:bottom-20 lg:left-4 right-4 top-4 lg:bg-opacity-75 lg:bg-black ">
+              <div className="flex gap-4 lg:flex-col lg:hidden lg:group-hover:flex lg:absolute lg:justify-center lg:items-center lg:bottom-20 lg:left-4 right-4 top-4 lg:bg-opacity-75 lg:bg-black ">
                 <Button
                   href="https://kelvin-audiophile-ecommerce-website.netlify.app/"
                   target="_blank"
@@ -46,59 +47,17 @@ function Main() {
                   text="View code"
                 />
               </div>
-            </article>
-            <article className=" w-full grow relative group sm:w-1/3 ">
-              <img
-                src={testProjectImg}
-                alt="project name"
-                className="w-full group/first"
+            </article> */}
+            {data.projects.map((project) => (
+              <Project
+                key={project.name}
+                name={project.name}
+                alt={project.name}
+                techStack={project.techStack}
+                gitHub={project.gitHub}
+                hosted={project.hosted}
               />
-              <h3 className="py-2">Design portfolio</h3>
-              <div className="flex gap-2">
-                <p>HTML</p>
-                <p>CSS</p>
-              </div>
-              <div className="flex-1 gap-3 lg:flex-col lg:hidden lg:group-hover:flex lg:absolute lg:justify-center lg:items-center lg:bottom-20 lg:left-4 right-4 top-4 lg:bg-opacity-75 lg:bg-black ">
-                <Button
-                  href="https://kelvin-audiophile-ecommerce-website.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  text="View project"
-                />
-                <Button
-                  href="https://kelvin-audiophile-ecommerce-website.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  text="View code"
-                />
-              </div>
-            </article>
-            <article className=" w-full grow relative group sm:w-1/3 ">
-              <img
-                src={testProjectImg}
-                alt="project name"
-                className="w-full group/first"
-              />
-              <h3 className="py-2">Design portfolio</h3>
-              <div className="flex gap-2">
-                <p>HTML</p>
-                <p>CSS</p>
-              </div>
-              <div className="flex-1 gap-3 lg:flex-col lg:hidden lg:group-hover:flex lg:absolute lg:justify-center lg:items-center lg:bottom-20 lg:left-4 right-4 top-4 lg:bg-opacity-75 lg:bg-black ">
-                <Button
-                  href="https://kelvin-audiophile-ecommerce-website.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  text="View project"
-                />
-                <Button
-                  href="https://kelvin-audiophile-ecommerce-website.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  text="View code"
-                />
-              </div>
-            </article>
+            ))}
           </div>
         </section>
       </div>
