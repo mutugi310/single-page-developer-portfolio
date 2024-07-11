@@ -27,40 +27,46 @@
   ],
   "projects": [
     {
-      "name": "Design portfolio",
+      "name": "Design Portfolio",
       "gitHub": "https://github.com/user/project1",
       "hosted": "https://project1.com",
-      "techStack": "React, Node.js"
+      "techStack": "React Node.js"
     },
     {
-      "name": "Project2",
+      "name": "Countries app",
       "gitHub": "https://github.com/user/project1",
       "hosted": "https://project1.com",
-      "techStack": "React, Node.js"
+      "techStack": "JavaScript CSS HTML"
     },
     {
-      "name": "Project3",
-      "gitHub": "https://github.com/user/project1",
-      "hosted": "https://project1.com",
-      "techStack": "React, Node.js"
+      "name": "Audiophile e-commerce",
+      "gitHub": "https://github.com/user/project2",
+      "hosted": "https://project2.com",
+      "techStack": "React Tailwind-CSS "
     },
     {
-      "name": "Project4",
-      "gitHub": "https://github.com/user/project1",
-      "hosted": "https://project1.com",
-      "techStack": "React, Node.js"
+      "name": " Company website",
+      "gitHub": "https://github.com/user/project3",
+      "hosted": "https://project3.com",
+      "techStack": "React Tailwind-CSS"
     },
     {
-      "name": "Project5",
+      "name": "Developer portfolio",
       "gitHub": "https://github.com/user/project1",
       "hosted": "https://project1.com",
-      "techStack": "React, Node.js"
+      "techStack": "React Tailwind-CSS"
     },
     {
-      "name": "Project6",
-      "gitHub": "https://github.com/user/project1",
-      "hosted": "https://project1.com",
-      "techStack": "React, Node.js"
+      "name": "Todo App",
+      "gitHub": "https://github.com/user/project4",
+      "hosted": "https://project4.com",
+      "techStack": "React Tailwind-CSS"
+    },
+    {
+      "name": "Law firm landing page",
+      "gitHub": "https://github.com/user/project5",
+      "hosted": "https://project5.com",
+      "techStack": "React Node.js"
     }
   ]
 }
