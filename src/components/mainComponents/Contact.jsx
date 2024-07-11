@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import leftOvals from "../../assets/ovals-left.png";
 
 function Contact() {
   const [name, setName] = useState("");
@@ -6,7 +7,7 @@ function Contact() {
   const [message, setMessage] = useState("");
   return (
     <>
-      <div className="w-full flex flex-col   h-full gap-8 items-center text-center align-top lg:items-start lg:text-start ">
+      <div className="w-full flex flex-col h-full gap-8 items-center text-center align-top lg:items-start lg:text-start ">
         <h2 className="font-bold text-6xl py-4">Contact</h2>
         <p>
           I would love to hear about your project and{" "}
@@ -18,7 +19,7 @@ function Contact() {
           you as soon as possible.
         </p>
       </div>
-      <div className="w-full flex flex-col ">
+      <div className="w-full flex flex-col  ">
         <form action="" className="w-full ">
           <input
             type="text"
@@ -66,6 +67,9 @@ function Contact() {
             >
               Send Message
             </button>
+          </div>
+          <div className="  absolute bottom-[4rem] -left-[12rem] w-[24rem] max-h-[4rem] z-100 opacity-3 rounded-full sm:[10rem] lg:-left-[6rem]">
+            <img src={leftOvals} alt="ovals overlay" />
           </div>
         </form>
       </div>

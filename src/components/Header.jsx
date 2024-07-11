@@ -5,26 +5,55 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaMedium } from "react-icons/fa6";
 //import { FaTwitter } from "react-icons/fa";
 import portrait from "../assets/image-potrait2.png";
+import leftOvals from "../assets/ovals-left.png";
 
 function Header() {
   return (
-    <header className="relative bg-black">
-      <div className="container  max-h-fit  mx-auto py-4 px-4 sm:px-15 lg:px-32 ">
+    <header className="relative bg-black  w-full overflow-hidden">
+      <div className="container relative  max-h-fit  mx-auto py-4 px-4 sm:px-15 lg:px-32 ">
+        <div className="  absolute top-[4rem] -left-[12rem] w-[24rem] max-h-[4rem] z-99 opacity-3 rounded-full sm:-left-[10rem] lg:-left-[2rem]">
+          <img src={leftOvals} alt="ovals overlay" />
+        </div>
         <div className="flex flex-col w-1/3 gap-2 mx-auto sm:flex-row sm:w-full  justify-between relative z-10">
           <p className="text-2xl text-center">mutugiKelvin</p>
           <div className="flex justify-evenly sm:gap-4  ">
-            <FaGithub className="size size-4 sm:size-6"></FaGithub>
-            <FaMedium className="size size-4 sm:size-6"></FaMedium>
-            <FaLinkedin className="size size-4 sm:size-6"></FaLinkedin>
-            <FaXTwitter className="size size-4 sm:size-6"></FaXTwitter>
+            <a
+              href="https://www.linkedin.com/in/mutugikelvin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="size size-4 sm:size-6" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/mutugikelvin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaMedium className="size size-4 sm:size-6" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/mutugikelvin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin className="size size-4 sm:size-6" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/mutugikelvin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaXTwitter className="size size-4 sm:size-6" />
+            </a>
           </div>
         </div>
-        <div className="flex flex-col flex-nowrap relative -top-[4.5rem] sm:flex-row-reverse justify-center sm:-top-12 sm:right-0">
-          <div className="  bg-black-light grow w-1/2 mx-auto sm:w-1/3  ">
+        <div className="flex flex-col flex-nowrap relative z-0 -top-[4.5rem] sm:flex-row-reverse justify-center sm:-top-12 sm:right-0">
+          <div className=" absolute border-2 border-white h-16 w-16 rounded-full bottom-[45%] right-[15%] z-99 sm:h-20 sm:w-20  sm:bottom-[6%] md:bottom-[10%] md:right-[28%]"></div>
+          <div className="  bg-black-light  grow w-1/2 mx-auto sm:w-1/3  ">
             <img
               src={portrait}
               alt="developer portrait"
-              className=" w-full pt-24 z-0"
+              className=" w-full pt-24  "
             />
           </div>
           <div className="flex flex-col grow  w-full items-center justify-center  relative left-0 z-9  sm:w-2/3 sm:items-start sm:justify-end sm:-pr-10 lg:justify-center ">
