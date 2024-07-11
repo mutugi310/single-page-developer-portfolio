@@ -11,7 +11,7 @@ function Header() {
     <header className="relative bg-black">
       <div className="container  max-h-fit  mx-auto py-4 px-4 sm:px-15 lg:px-32 ">
         <div className="flex flex-col w-1/3 gap-2 mx-auto sm:flex-row sm:w-full  justify-between relative z-10">
-          <p className="text-2xl text-center">adamkeyes</p>
+          <p className="text-2xl text-center">mutugiKelvin</p>
           <div className="flex justify-evenly sm:gap-4  ">
             <FaGithub className="size size-4 sm:size-6"></FaGithub>
             <FaMedium className="size size-4 sm:size-6"></FaMedium>
@@ -28,13 +28,13 @@ function Header() {
             />
           </div>
           <div className="flex flex-col grow  w-full items-center justify-center  relative left-0 z-9  sm:w-2/3 sm:items-start sm:justify-end sm:-pr-10 lg:justify-center ">
-            <h1 className="font-bold text-4xl  py-6 md:text-5xl lg:tracking-wide lg:text-6xl ">
+            <h1 className="font-bold text-3xl  py-6 md:text-4xl lg:tracking-wide lg:text-5xl ">
               Nice to <br className="hidden sm:block lg:hidden " /> meet you!
               <br className="sm:hidden lg:block" /> I’m
               <br className="hidden sm:block lg:hidden" />
               <span className="underline underline-offset-8 decoration-green decoration-2">
                 {" "}
-                Adam Keyes
+                Kelvin Mutugi
               </span>
               .
             </h1>
