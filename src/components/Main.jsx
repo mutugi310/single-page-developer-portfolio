@@ -5,12 +5,17 @@ import testProjectImg from "../assets/testProject.jpg";
 import Button from "./sharedComponents/Button";
 import Project from "./mainComponents/Project";
 import Contact from "./mainComponents/Contact";
+import rightOvals from "../assets/ovals-right.png";
+import leftOvals from "../assets/ovals-left.png";
 
 function Main() {
   return (
-    <main>
-      <div className="container  mx-auto  px-4  sm:px-15 lg:px-32">
-        <section className="flex flex-col flex-1 border-t-[1.5px] border-t-gray items-center gap-4 py-10 flex-wrap sm:flex-row  justify-between">
+    <main className="relative w-full overflow-hidden">
+      <div className="  absolute top-[50rem] -right-[12rem] w-[24rem] max-h-[4rem] z-100 opacity-3 rounded-full sm:-right-[16rem] md:-right-[12rem] md:top-[20rem] lg:-right-[14rem] lg:top-[12rem]">
+        <img src={rightOvals} alt="ovals overlay" />
+      </div>
+      <div className="container relative mx-auto px-4 sm:px-15 lg:px-32">
+        <section className="flex flex-col flex-1 border-y-[1.5px] border-y-gray items-center gap-4 py-10 flex-wrap sm:flex-row  justify-between">
           {data.skills.map((skill) => (
             <Skill
               key={skill.name}
@@ -62,9 +67,10 @@ function Main() {
           </div>
         </section>
       </div>
+
       <section className="bg-black-light">
-        <div className="container mx-auto px-4  flex flex-col justify-between gap-10 py-16 sm:px-15 lg:px-32 lg:flex-row ">
-          <Contact></Contact>
+        <div className=" container relative mx-auto px-4 flex flex-col justify-between gap-10 py-16 sm:px-15 lg:px-32 lg:flex-row ">
+          <Contact />
         </div>
       </section>
     </main>
