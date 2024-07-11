@@ -4,11 +4,12 @@ import data from "../assets/data/data.json";
 import testProjectImg from "../assets/testProject.jpg";
 import Button from "./sharedComponents/Button";
 import Project from "./mainComponents/Project";
+import Contact from "./mainComponents/Contact";
 
 function Main() {
   return (
     <main>
-      <div className="container mx-auto  px-4  sm:px-15 lg:px-32">
+      <div className="container  mx-auto  px-4  sm:px-15 lg:px-32">
         <section className="flex flex-col flex-1 border-t-[1.5px] border-t-gray items-center gap-4 py-10 flex-wrap sm:flex-row  justify-between">
           {data.skills.map((skill) => (
             <Skill
@@ -61,6 +62,11 @@ function Main() {
           </div>
         </section>
       </div>
+      <section className="bg-black-light">
+        <div className="container mx-auto px-4  flex flex-col justify-between gap-10 py-16 sm:px-15 lg:px-32 lg:flex-row ">
+          <Contact></Contact>
+        </div>
+      </section>
     </main>
   );
 }

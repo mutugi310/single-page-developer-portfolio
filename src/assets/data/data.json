@@ -28,8 +28,8 @@
   "projects": [
     {
       "name": "Design Portfolio",
-      "gitHub": "https://github.com/user/project1",
-      "hosted": "https://project1.com",
+      "gitHub": "https://github.com/mutugi310/audiophile-ecommerce-website",
+      "hosted": "https://kelvin-audiophile-ecommerce-website.netlify.app/",
       "techStack": "React Node.js"
     },
     {
