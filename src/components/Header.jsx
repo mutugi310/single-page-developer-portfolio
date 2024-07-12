@@ -3,9 +3,9 @@ import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaMedium } from "react-icons/fa6";
-//import { FaTwitter } from "react-icons/fa";
-import portrait from "../assets/image-potrait2.png";
+import portrait from "../assets/image-portrait2.png";
 import leftOvals from "../assets/ovals-left.png";
+import Button from "./sharedComponents/Button";
 
 function Header() {
   return (
@@ -73,10 +73,19 @@ function Header() {
               accessible web apps
               <br className="hidden md:block" /> that users love.
             </p>
-            <button className="uppercase border-b-2 w-fit border-green my-2  hover:text-green hover:font-bold">
+            <button className="uppercase border-b-2 w-fit border-green my-2  hover:text-green hover:font-bold focus:text-green focus:font-bold">
               Contact Me
             </button>
           </div>
+        </div>
+        <div className="justify-center sm:justify-start ">
+          <a
+            href="./assets/KelvinMutugi_Resume.pdf"
+            download="KelvinMutugi_Resume.pdf"
+            className="uppercase border-b-2 w-fit border-green my-2  hover:text-green hover:font-bold focus:text-green focus:font-bold"
+          >
+            Download Resume
+          </a>
         </div>
       </div>
     </header>
