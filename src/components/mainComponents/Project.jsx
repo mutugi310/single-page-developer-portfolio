@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "react-scroll";
-import testProjectImg from "../../assets/testProject.jpg";
+import defaultImg from "../../assets/testProject.jpg";
 
 function Project({ name, alt, gitHub, hosted, techStack }) {
+  //set initial image source
+  const [imgSrc, setImgSrc] = useState(
+    new URL(`../../assets/projectImgs/${name}.png`, import.meta.url).href
+  );
+  //handle error incase url doesn't exist
+  const handleError = () => {
+    setImgSrc(defaultImg);
+  };
+
   return (
     <article className="relative group py-4 ">
-      <img src={testProjectImg} alt={alt} className="w-full" />
-      <h3 className="py-2">{name}</h3>
+      <div>
+        <img
+          src={imgSrc}
+          alt={alt}
+          onError={handleError}
+          className="w-full min-h-40 object-cover"
+        />
+      </div>
+
+      <h3 className="py-2 ">{name}</h3>
       <div className="flex gap-2">
         <p>{techStack}</p>
       </div>

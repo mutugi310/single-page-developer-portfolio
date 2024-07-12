@@ -8,7 +8,9 @@ function Contact() {
   return (
     <>
       <div className="w-full flex flex-col h-full gap-8 items-center text-center align-top lg:items-start lg:text-start ">
-        <h2 className="font-bold text-6xl py-4">Contact</h2>
+        <h2 className="font-bold text-4xl md:text-5xl lg:text-6xl py-4">
+          Contact
+        </h2>
         <p>
           I would love to hear about your project and{" "}
           <br className="sm:hidden md:hidden lg:hidden" />

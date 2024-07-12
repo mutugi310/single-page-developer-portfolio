@@ -6,7 +6,6 @@ import Button from "./sharedComponents/Button";
 import Project from "./mainComponents/Project";
 import Contact from "./mainComponents/Contact";
 import rightOvals from "../assets/ovals-right.png";
-import leftOvals from "../assets/ovals-left.png";
 
 function Main() {
   return (
@@ -26,7 +25,9 @@ function Main() {
         </section>
 
         <section className="py-10">
-          <h2>Project</h2>
+          <h2 className="font-bold text-4xl md:text-5xl lg:text-6xl">
+            Projects
+          </h2>
           <div className="grid grid-cols-1  gap-4 py-8  flex-wrap sm:grid-cols-2 ">
             {/* <article className=" relative group py-4 ">
               <img
