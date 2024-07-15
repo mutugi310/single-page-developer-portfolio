@@ -3,6 +3,7 @@ import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaMedium } from "react-icons/fa6";
+import { Link as ScrollLink } from "react-scroll";
 import portrait from "../assets/image-portrait2.png";
 import leftOvals from "../assets/ovals-left.png";
 import Button from "./sharedComponents/Button";
@@ -56,7 +57,7 @@ function Header() {
               className=" w-full pt-24  "
             />
           </div>
-          <div className="flex flex-col grow  w-full items-center justify-center  relative left-0 z-9  sm:w-2/3 sm:items-start sm:justify-end sm:-pr-10 lg:justify-center ">
+          <div className="flex flex-col grow  w-full items-center justify-between  relative left-0 z-9  sm:w-2/3 sm:items-start sm:justify-end sm:-pr-10 lg:justify-center ">
             <h1 className="font-bold text-3xl  py-6 md:text-4xl lg:tracking-wide lg:text-5xl ">
               Nice to <br className="hidden sm:block lg:hidden " /> meet you!
               <br className="sm:hidden lg:block" /> I’m
@@ -67,15 +68,17 @@ function Header() {
               </span>
               .
             </h1>
-            <p className="mb-4 text-xl">
-              Based in the UK, I’m a front-end developer
-              <br className="hidden sm:block" /> passionate about building
-              accessible web apps
-              <br className="hidden md:block" /> that users love.
+            <p className="mb-4 text-xl text-center sm:text-left ">
+              Based in the Kenya, I’m a front-end developer passionate about
+              building accessible web apps that users love.
             </p>
-            <button className="uppercase border-b-2 w-fit border-green my-2  hover:text-green hover:font-bold focus:text-green focus:font-bold">
+            <ScrollLink
+              to="contact-section"
+              smooth="true"
+              className="uppercase cursor-pointer border-b-2 w-fit border-green my-2  hover:text-green hover:font-bold focus:text-green focus:font-bold"
+            >
               Contact Me
-            </button>
+            </ScrollLink>
           </div>
         </div>
         <div className="justify-center sm:justify-start ">
