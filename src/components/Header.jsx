@@ -83,7 +83,7 @@ function Header() {
         </div>
         <div className="justify-center sm:justify-start ">
           <a
-            href="./assets/KelvinMutugi_Resume.pdf"
+            href="../assets/KelvinMutugi_Resume.pdf"
             download="KelvinMutugi_Resume.pdf"
             className="uppercase border-b-2 w-fit border-green my-2  hover:text-green hover:font-bold focus:text-green focus:font-bold"
           >
