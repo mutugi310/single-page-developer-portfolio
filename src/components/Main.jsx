@@ -6,6 +6,7 @@ import Button from "./sharedComponents/Button";
 import Project from "./mainComponents/Project";
 import Contact from "./mainComponents/Contact";
 import rightOvals from "../assets/ovals-right.png";
+import { SKILLS } from "../constants/data";
 
 function Main() {
   return (
@@ -14,12 +15,14 @@ function Main() {
         <img src={rightOvals} alt="ovals overlay" />
       </div>
       <div className="container relative mx-auto px-4 sm:px-15 lg:px-32">
-        <section className="flex flex-col flex-1 border-y-[1.5px] border-y-gray items-center gap-4 py-10 flex-wrap sm:flex-row  justify-between">
-          {data.skills.map((skill) => (
+        <section className="grid grid-cols-2 border-y-[1.5px] border-y-gray items-center gap-4  py-10 sm:grid-cols-4 lg:grid-cols-5 ">
+          {SKILLS.map((skill) => (
             <Skill
               key={skill.name}
+              icon={skill.icon}
               skill={skill.name}
               experience={skill.experienceYrs}
+              className={skill.className}
             />
           ))}
         </section>

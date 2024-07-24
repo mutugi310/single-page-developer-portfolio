@@ -24,11 +24,11 @@ function Contact() {
       </div>
 
       <div className="w-full flex flex-col  ">
-        <Element name="contact-section" className="element">
+        <Element name="contact-section">
           <form action="" className="w-full ">
             <input
               type="text"
-              name=""
+              name="name"
               id=""
               placeholder="Name"
               value={name}
@@ -39,7 +39,7 @@ function Contact() {
             <br />
             <input
               type="email"
-              name=""
+              name="email"
               id=""
               placeholder="Email"
               value={email}

@@ -34,46 +34,55 @@ export const SKILLS = [
     icon: FaHtml5,
     name: "HTML",
     experienceYrs: calculateExperience(2022),
+    className: "text-[#f06529] h-6 w-6",
   },
   {
     icon: FaCss3Alt,
     name: "CSS",
     experienceYrs: calculateExperience(2022),
+    className: "text-[#2965f1] h-6 w-6",
   },
   {
     icon: FaAws,
     name: "AWS",
     experienceYrs: calculateExperience(2023),
+    className: "text-orange-500 h-6 w-6 bg-white",
   },
   {
     icon: FaJsSquare,
     name: "JavaScript",
     experienceYrs: calculateExperience(2023),
+    className: "text-yellow-500 h-6 w-6",
   },
   {
     icon: FaUniversalAccess,
     name: "Accessibility",
     experienceYrs: calculateExperience(2022),
+    className: "text-white h-6 w-6",
   },
   {
     icon: FaReact,
     name: "React",
     experienceYrs: calculateExperience(2023),
+    className: "text-[#88dded] h-6 w-6",
   },
   {
     icon: RiTailwindCssFill,
     name: "Tailwind",
     experienceYrs: calculateExperience(2023),
+    className: "text-[#21759b] h-6 w-6",
   },
   {
     icon: FaWordpress,
     name: "WordPress",
     experienceYrs: calculateExperience(2022),
+    className: "text-black bg-white h-6 w-6",
   },
   {
     icon: FaNodeJs,
     name: "NodeJS",
     experienceYrs: calculateExperience(2023),
+    className: "text-green h-6 w-6",
   },
 ];
 
