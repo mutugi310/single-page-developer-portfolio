@@ -1,12 +1,18 @@
 import React from "react";
 import Skill from "./mainComponents/Skill";
+import About from "./mainComponents/About";
 import data from "../assets/data/data.json";
 import testProjectImg from "../assets/testProject.jpg";
 import Button from "./sharedComponents/Button";
 import Project from "./mainComponents/Project";
 import Contact from "./mainComponents/Contact";
 import rightOvals from "../assets/ovals-right.png";
-import { SKILLS } from "../constants/data";
+import {
+  SKILLS,
+  ABOUT_TEXT,
+  ABOUT_EXPERT,
+  ABOUT_TEXT_Bottom,
+} from "../constants/data";
 
 function Main() {
   return (
@@ -15,22 +21,34 @@ function Main() {
         <img src={rightOvals} alt="ovals overlay" />
       </div>
       <div className="container relative mx-auto px-4 sm:px-15 lg:px-32">
-        <section className="grid grid-cols-2 border-y-[1.5px] border-y-gray items-center gap-4  py-10 sm:grid-cols-4 lg:grid-cols-5 ">
-          {SKILLS.map((skill) => (
-            <Skill
-              key={skill.name}
-              icon={skill.icon}
-              skill={skill.name}
-              experience={skill.experienceYrs}
-              className={skill.className}
-            />
-          ))}
+        <section className="grid py-6 border-t-[1.5px] border-t-gray rounded-sm sm:grid-cols-7  gap-10">
+          <About
+            aboutDescription={ABOUT_TEXT}
+            aboutBottomText={ABOUT_TEXT_Bottom}
+          />
+        </section>
+        <section className=" border-y-[1.5px] border-y-gray pt-10 ">
+          <h2 className="text-center">Professional Skills</h2>
+          <div className="grid grid-cols-2 items-center gap-4 py-10  sm:grid-cols-4 lg:grid-cols-5 ">
+            {SKILLS.map((skill) => (
+              <Skill
+                key={skill.name}
+                icon={skill.icon}
+                skill={skill.name}
+                experience={skill.experienceYrs}
+                className={skill.className}
+              />
+            ))}
+          </div>
         </section>
 
         <section className="py-10">
-          <h2 className="font-bold text-4xl md:text-5xl lg:text-6xl">
-            Projects
-          </h2>
+          <div className="flex flex-col justify-center text-center gap-4">
+            <h2 className="font-bold text-2xl md:text-3xl lg:text-4xl text-center">
+              Projects
+            </h2>
+            <p>Exprore my latest Projects</p>
+          </div>
           <div className="grid grid-cols-1  gap-4 py-8  flex-wrap sm:grid-cols-2 ">
             {/* <article className=" relative group py-4 ">
               <img

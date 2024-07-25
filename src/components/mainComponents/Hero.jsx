@@ -3,8 +3,8 @@ import { Link as ScrollLink, Element } from "react-scroll";
 
 import { GoDownload } from "react-icons/go";
 import { FaGithub, FaLinkedin, FaXTwitter, FaMedium } from "react-icons/fa6";
-
 import portrait from "../../assets/image-portrait2.png";
+import Socials from "../sharedComponents/Socials";
 
 function Hero() {
   return (
@@ -52,71 +52,13 @@ function Hero() {
               </span>
             </a>
             <div className="flex justify-start gap-4 mt-4 sm:hidden  ">
-              <a
-                href="https://www.linkedin.com/in/mutugikelvin"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-black-light p-2 rounded-md hover:text-green hover:scale-110"
-              >
-                <FaGithub className="size size-4 " />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/mutugikelvin"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-black-light p-2 rounded-md hover:text-green hover:scale-110"
-              >
-                <FaMedium className="size size-4 " />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/mutugikelvin"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-black-light p-2 rounded-md hover:text-green hover:scale-110"
-              >
-                <FaLinkedin className="size size-4 " />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/mutugikelvin"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-black-light p-2 rounded-md hover:text-green hover:scale-110"
-              >
-                <FaXTwitter className="size size-4 " />
-              </a>
+              <Socials />
             </div>
           </div>
         </div>
       </div>
       <div className="hidden md:flex md:justify-center gap-4  ">
-        <a
-          href="https://www.linkedin.com/in/mutugikelvin"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaGithub className="size size-4 sm:size-6" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/mutugikelvin"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaMedium className="size size-4 sm:size-6" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/mutugikelvin"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaLinkedin className="size size-4 sm:size-6" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/mutugikelvin"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaXTwitter className="size size-4 sm:size-6" />
-        </a>
+        <Socials />
       </div>
     </section>
   );
