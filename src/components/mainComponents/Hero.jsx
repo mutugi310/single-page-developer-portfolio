@@ -5,6 +5,7 @@ import { GoDownload } from "react-icons/go";
 import { FaGithub, FaLinkedin, FaXTwitter, FaMedium } from "react-icons/fa6";
 import portrait from "../../assets/image-portrait2.png";
 import Socials from "../sharedComponents/Socials";
+import { HERO_TEXT } from "../../constants/data";
 
 function Hero() {
   return (
@@ -20,20 +21,15 @@ function Hero() {
         </div>
         <div className="flex flex-col grow  w-full items-center justify-between  relative left-0 z-9  sm:w-2/3 sm:items-start sm:justify-end sm:-pr-10 lg:justify-center ">
           <h1 className="font-bold text-3xl  py-6 md:text-4xl lg:tracking-wide lg:text-5xl ">
-            Nice to <br className="hidden sm:block lg:hidden " /> meet you!
-            <br className="sm:hidden lg:block" /> I’m
-            <br className="hidden sm:block lg:hidden" />
+            <span className=" text-lg">Hello 👋, I’m</span> <br />
             <span className="underline underline-offset-8 decoration-green decoration-2">
-              {" "}
               Kelvin Mutugi
             </span>
             .
           </h1>
-          <p className="mb-4 text-xl text-center sm:text-left ">
-            Based in the Kenya, I’m a front-end developer passionate about
-            building accessible web apps that users love.
-          </p>
-          <div className="flex flex-col gap-4 items-center sm:flex-row">
+          <p className="mb-4 text-xl text-center sm:text-left ">{HERO_TEXT}</p>
+          <p>Let's build something amazing together!</p>
+          <div className="flex flex-col pt-2 gap-4 items-center sm:flex-row">
             <ScrollLink
               to="contact-section"
               smooth="true"
@@ -57,9 +53,9 @@ function Hero() {
           </div>
         </div>
       </div>
-      <div className="hidden md:flex md:justify-center gap-4  ">
+      <aside className="hidden md:flex md:justify-center gap-4  ">
         <Socials />
-      </div>
+      </aside>
     </section>
   );
 }

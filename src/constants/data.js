@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa";
 
 export const HERO_TEXT =
-  "Passionate Front-End Developer and AWS Cloud practitioner crafting seamless user experiences with modern web technologies. Let's build something amazing together!";
+  "Passionate Front-End Developer and AWS Cloud practitioner crafting seamless user experiences with modern web technologies.";
 export const ABOUT_TEXT =
   "As a result-oriented front-end developer with a strong foundation in web development and cloud computing, I excel in creating dynamic, responsive, and accessible web applications. My expertise spans across various aspects of web development and AWS cloud services, always aiming to deliver high-quality, user-centric, and impactful digital solutions while maintaining highly-available, scalable, and secure systems.";
 export const ABOUT_TEXT_Bottom =
@@ -23,6 +23,7 @@ export const ABOUT_EXPERT = [
   "Integrating third-party services such as AWS, leveraging cloud computing to optimize application performance and reliability.",
   "Improving website loading times by upto 30% through performance optimization techniques.",
   "Implementing accessibility best practices, ensuring inclusive and user-friendly web experiences.",
+  "Continually learning and aspiring to implement the latest technologies.",
 ];
 
 const calculateExperience = (startYear) => {

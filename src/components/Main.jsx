@@ -7,12 +7,7 @@ import Button from "./sharedComponents/Button";
 import Project from "./mainComponents/Project";
 import Contact from "./mainComponents/Contact";
 import rightOvals from "../assets/ovals-right.png";
-import {
-  SKILLS,
-  ABOUT_TEXT,
-  ABOUT_EXPERT,
-  ABOUT_TEXT_Bottom,
-} from "../constants/data";
+import { SKILLS, PROJECTS } from "../constants/data";
 
 function Main() {
   return (
@@ -21,11 +16,8 @@ function Main() {
         <img src={rightOvals} alt="ovals overlay" />
       </div>
       <div className="container relative mx-auto px-4 sm:px-15 lg:px-32">
-        <section className="grid py-6 border-t-[1.5px] border-t-gray rounded-sm sm:grid-cols-7  gap-10">
-          <About
-            aboutDescription={ABOUT_TEXT}
-            aboutBottomText={ABOUT_TEXT_Bottom}
-          />
+        <section className="py-6 border-t-[1.5px] border-t-gray rounded-sm ">
+          <About />
         </section>
         <section className=" border-y-[1.5px] border-y-gray pt-10 ">
           <h2 className="text-center">Professional Skills</h2>
@@ -49,34 +41,8 @@ function Main() {
             </h2>
             <p>Exprore my latest Projects</p>
           </div>
-          <div className="grid grid-cols-1  gap-4 py-8  flex-wrap sm:grid-cols-2 ">
-            {/* <article className=" relative group py-4 ">
-              <img
-                src={testProjectImg}
-                alt="project name"
-                className="w-full "
-              />
-              <h3 className="py-2">Design portfolio</h3>
-              <div className="flex gap-2">
-                <p>HTML</p>
-                <p>CSS</p>
-              </div>
-              <div className="flex gap-4 lg:flex-col lg:hidden lg:group-hover:flex lg:absolute lg:justify-center lg:items-center lg:bottom-20 lg:left-4 right-4 top-4 lg:bg-opacity-75 lg:bg-black ">
-                <Button
-                  href="https://kelvin-audiophile-ecommerce-website.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  text="View project"
-                />
-                <Button
-                  href="https://kelvin-audiophile-ecommerce-website.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  text="View code"
-                />
-              </div>
-            </article> */}
-            {data.projects.map((project) => (
+          <div className="grid grid-cols-1  gap-4 py-8   sm:grid-cols-2 ">
+            {PROJECTS.map((project) => (
               <Project
                 key={project.name}
                 name={project.name}
