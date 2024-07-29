@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
-import { FaGithub, FaLinkedin, FaXTwitter, FaMedium } from "react-icons/fa6";
 import { CiMenuFries } from "react-icons/ci";
-import { IoMdClose } from "react-icons/io";
 import logo from "../assets/kelvinMutugi.svg";
 import leftOvals from "../assets/ovals-left.png";
 import Button from "./sharedComponents/Button";
@@ -18,8 +16,11 @@ function Header() {
     <header className="relative bg-black  w-full overflow-hidden">
       <div className="container relative  mx-auto py-4 px-4 sm:px-15 lg:px-32 ">
         <div className="  absolute top-[4rem] -left-[12rem] w-[24rem] max-h-[4rem] z-99 opacity-3 rounded-full sm:-left-[10rem] lg:-left-[2rem]">
-          <img src={leftOvals} alt="ovals overlay" />
+          <ScrollLink to="hero-section" smooth="true" tabIndex="0">
+            <img src={leftOvals} alt="ovals overlay" />
+          </ScrollLink>
         </div>
+
         <nav className="flex sticky justify-between w-full  z-10">
           <img
             src={logo}
@@ -52,7 +53,7 @@ function Header() {
             </li>
             <li>
               <ScrollLink
-                to="contact-section"
+                to="about-section"
                 smooth="true"
                 tabIndex="0"
                 activeClass="active"
@@ -63,7 +64,7 @@ function Header() {
             </li>
             <li>
               <ScrollLink
-                to="contact-section"
+                to="skills-section"
                 smooth="true"
                 tabIndex="0"
                 activeClass="active"
@@ -74,7 +75,7 @@ function Header() {
             </li>
             <li>
               <ScrollLink
-                to="contact-section"
+                to="project-section"
                 smooth="true"
                 tabIndex="0"
                 activeClass="active"
