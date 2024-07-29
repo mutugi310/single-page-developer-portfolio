@@ -16,10 +16,11 @@ function MobileMenu({ onClose }) {
         <ul className=" flex flex-col w-1/3 gap-2 pt-4 ">
           <li>
             <ScrollLink
-              to="contact-section"
+              to="hero-section"
               smooth="true"
               tabIndex="0"
               activeClass="active"
+              onClick={onClose}
               className="text-md cursor-pointer hover:border-b-2 hover:border-b-green focus:border-b-2 focus:border-b-green  active:text-green"
             >
               Home
@@ -27,10 +28,11 @@ function MobileMenu({ onClose }) {
           </li>
           <li>
             <ScrollLink
-              to="contact-section"
+              to="about-section"
               smooth="true"
               tabIndex="0"
               activeClass="active"
+              onClick={onClose}
               className="text-md cursor-pointer hover:border-b-2 hover:border-b-green focus:border-b-2 focus:border-b-green  active:text-green"
             >
               About
@@ -38,10 +40,11 @@ function MobileMenu({ onClose }) {
           </li>
           <li>
             <ScrollLink
-              to="contact-section"
+              to="skills-section"
               smooth="true"
               tabIndex="0"
               activeClass="active"
+              onClick={onClose}
               className="text-md cursor-pointer hover:border-b-2 hover:border-b-green focus:border-b-2 focus:border-b-green  active:text-green"
             >
               Skills
@@ -49,10 +52,11 @@ function MobileMenu({ onClose }) {
           </li>
           <li>
             <ScrollLink
-              to="contact-section"
+              to="project-section"
               smooth="true"
               tabIndex="0"
               activeClass="active"
+              onClick={onClose}
               className="text-md cursor-pointer hover:border-b-2 hover:border-b-green focus:border-b-2 focus:border-b-green  active:text-green"
             >
               Projects
@@ -64,6 +68,7 @@ function MobileMenu({ onClose }) {
               smooth="true"
               tabIndex="0"
               activeClass="active"
+              onClick={onClose}
               className="text-md cursor-pointer hover:border-b-2 hover:border-b-green focus:border-b-2 focus:border-b-green  active:text-green"
             >
               Contact

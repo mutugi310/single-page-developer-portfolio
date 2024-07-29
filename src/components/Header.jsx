@@ -42,7 +42,7 @@ function Header() {
           <ul className="hidden md:flex justify-evenly gap-8  ">
             <li>
               <ScrollLink
-                to="contact-section"
+                to="hero-section"
                 smooth="true"
                 tabIndex="0"
                 activeClass="active"
