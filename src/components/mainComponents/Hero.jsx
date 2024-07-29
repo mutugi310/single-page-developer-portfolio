@@ -1,8 +1,6 @@
 import React from "react";
 import { Link as ScrollLink, Element } from "react-scroll";
-
 import { GoDownload } from "react-icons/go";
-import { FaGithub, FaLinkedin, FaXTwitter, FaMedium } from "react-icons/fa6";
 import portrait from "../../assets/image-portrait2.png";
 import Socials from "../sharedComponents/Socials";
 import { HERO_TEXT } from "../../constants/data";
@@ -22,9 +20,9 @@ function Hero() {
           </div>
 
           <div className="flex flex-col grow  w-full items-center justify-between  relative left-0 z-9  sm:w-2/3 sm:items-start sm:justify-end sm:-pr-10 lg:justify-center ">
-            <h1 className="font-bold text-3xl  py-6 md:text-4xl lg:tracking-wide lg:text-5xl ">
+            <h1 className="font-bold text-3xl py-6 md:text-4xl lg:tracking-wide lg:text-5xl ">
               <span className=" text-lg">Hello 👋, I’m</span> <br />
-              <span className="underline underline-offset-8 decoration-green decoration-2">
+              <span className=" bg-gradient-to-r-custom bg-clip-text text-transparent underline underline-offset-8 decoration-green decoration-2">
                 Kelvin Mutugi
               </span>
               .

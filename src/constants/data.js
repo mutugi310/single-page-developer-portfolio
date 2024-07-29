@@ -112,17 +112,4 @@ export const PROJECTS = [
     hosted: "https://project1.com",
     techStack: ["React", "Tailwind-CSS"],
   },
-  {
-    name: " Company website",
-    gitHub: "https://github.com/user/project3",
-    hosted: "https://project3.com",
-    techStack: ["React", "Tailwind-CSS"],
-  },
-
-  {
-    name: "Loan Calculator",
-    gitHub: "https://github.com/user/project5",
-    hosted: "https://project5.com",
-    techStack: ["HTML", "CSS JavaScript"],
-  },
 ];

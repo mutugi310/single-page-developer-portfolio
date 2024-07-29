@@ -10,6 +10,9 @@ export default {
         gray: "#D9D9D9",
         white: "#D9D9D9",
       },
+      backgroundImage: {
+        "gradient-to-r-custom": "linear-gradient(to right, #4EE1A0, #A1F3D5)",
+      },
       fontFamily: {
         space: ["Space Grotesk", "sans-serif"],
       },
