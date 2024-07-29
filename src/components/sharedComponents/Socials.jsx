@@ -8,7 +8,7 @@ function Socials({ bgColor = "bg-black-light" }) {
         href="https://www.linkedin.com/in/mutugikelvin"
         target="_blank"
         rel="noopener noreferrer"
-        className={`${bgColor} p-2 rounded-md hover:text-green hover:scale-110`}
+        className={`${bgColor} p-2 rounded-md hover:text-green hover:scale-110 focus:text-green focus:scale-110`}
       >
         <FaGithub className="size size-4 " />
       </a>
@@ -16,7 +16,7 @@ function Socials({ bgColor = "bg-black-light" }) {
         href="https://www.linkedin.com/in/mutugikelvin"
         target="_blank"
         rel="noopener noreferrer"
-        className={`${bgColor} p-2 rounded-md hover:text-green hover:scale-110`}
+        className={`${bgColor} p-2 rounded-md hover:text-green hover:scale-110 focus:text-green focus:scale-110`}
       >
         <FaMedium className="size size-4 " />
       </a>
@@ -24,7 +24,7 @@ function Socials({ bgColor = "bg-black-light" }) {
         href="https://www.linkedin.com/in/mutugikelvin"
         target="_blank"
         rel="noopener noreferrer"
-        className={`${bgColor} p-2 rounded-md hover:text-green hover:scale-110`}
+        className={`${bgColor} p-2 rounded-md hover:text-green hover:scale-110 focus:text-green focus:scale-110`}
       >
         <FaLinkedin className="size size-4 " />
       </a>
@@ -32,7 +32,7 @@ function Socials({ bgColor = "bg-black-light" }) {
         href="https://www.linkedin.com/in/mutugikelvin"
         target="_blank"
         rel="noopener noreferrer"
-        className={`${bgColor} p-2 rounded-md hover:text-green hover:scale-110`}
+        className={`${bgColor} p-2 rounded-md hover:text-green hover:scale-110 focus:text-green focus:scale-110`}
       >
         <FaXTwitter className="size size-4 " />
       </a>
