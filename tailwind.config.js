@@ -12,6 +12,9 @@ export default {
       },
       backgroundImage: {
         "gradient-to-r-custom": "linear-gradient(to right, #4EE1A0, #A1F3D5)",
+        "gradient2-to-r-custom": "linear-gradient(to right, #4EE1A0, #00C6FF)",
+        "gradient-custom":
+          "linear-gradient(180.8deg, rgb(66, 255, 132) -0.8%, rgb(124, 216, 255) 99%)",
       },
       fontFamily: {
         space: ["Space Grotesk", "sans-serif"],

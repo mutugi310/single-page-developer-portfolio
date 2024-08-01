@@ -1,6 +1,6 @@
 import React from "react";
 import testProjectImg from "../../assets/testProject.jpg";
-import portrait from "../../assets/image-portrait2.png";
+import portrait from "../../assets/dev-portrait_bgTest-L.png";
 import { ABOUT_TEXT, ABOUT_EXPERT } from "../../constants/data";
 import Socials from "../sharedComponents/Socials";
 import { CgRadioChecked } from "react-icons/cg";
@@ -12,8 +12,14 @@ function About() {
         About <span>Me</span>
       </h2>
       <div className="grid sm:grid-cols-12 gap-10">
-        <div className="  flex items-center sm:col-span-5">
-          <img src={portrait} alt="image of kelvin" className="rounded-md" />
+        <div className="  flex items-center justify-center align-top sm:col-span-5">
+          <div>
+            <img
+              src={portrait}
+              alt="image of kelvin"
+              className="rounded-md border-2 border-green -mt-10"
+            />
+          </div>
         </div>
         <div className="sm:col-span-7">
           <div className="flex flex-col justify-center text-center gap-4 pb-4">

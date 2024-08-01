@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { CiMenuFries } from "react-icons/ci";
 import logo from "../assets/kelvinMutugi.svg";
-import leftOvals from "../assets/ovals-left.png";
-import Button from "./sharedComponents/Button";
+
 import Hero from "./mainComponents/Hero";
 import MobileMenu from "./mainComponents/MobileMenu";
 
@@ -13,20 +12,16 @@ function Header() {
     setMenuOpen((prevState) => !prevState);
   };
   return (
-    <header className="relative bg-black  w-full overflow-hidden">
-      <div className="container relative  mx-auto py-4 px-4 sm:px-15 lg:px-32 ">
-        <div className="  absolute top-[4rem] -left-[12rem] w-[24rem] max-h-[4rem] z-99 opacity-3 rounded-full sm:-left-[10rem] lg:-left-[2rem]">
+    <header className=" bg-black  w-full">
+      <div className=" sticky top-0 bg-black   py-2  z-30 ">
+        <nav className="container mx-auto flex justify-between w-full py-2 px-4   sm:px-15 lg:px-32">
           <ScrollLink to="hero-section" smooth="true" tabIndex="0">
-            <img src={leftOvals} alt="ovals overlay" />
+            <img
+              src={logo}
+              alt="kelvin mutugi logo"
+              className="max-h-6 cursor-pointer"
+            />
           </ScrollLink>
-        </div>
-
-        <nav className="flex sticky justify-between w-full  z-10">
-          <img
-            src={logo}
-            alt="kelvin mutugi logo"
-            className="max-h-6 cursor-pointer"
-          />
           <div
             className="md:hidden bg-black-light p-1 rounded-sm hover:text-green hover:scale-105 focus:text-green focus:scale-105"
             onClick={toggleMenu}
@@ -86,7 +81,9 @@ function Header() {
             </li>
           </ul>
         </nav>
-        <Hero></Hero>
+      </div>
+      <div className="container mx-auto pb-10 px-4 sm:px-15 lg:px-32 ">
+        <Hero />
       </div>
     </header>
   );
