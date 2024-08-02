@@ -18,7 +18,10 @@ function Main() {
       </div>
       <div className="container relative mx-auto px-4 sm:px-15 lg:px-32">
         <Element name="about-section">
-          <section className="py-6 border-t-[1.5px] border-t-gray rounded-sm ">
+          <section
+            className="py-6 border-t-[1.5px] border-t-gray rounded-sm "
+            tabIndex="0"
+          >
             <About />
           </section>
         </Element>
@@ -26,7 +29,12 @@ function Main() {
         <Element name="skills-section">
           <section className=" border-y-[1.5px] border-y-gray pt-10 ">
             <h2 className="text-center">Professional Skills</h2>
-            <div className="grid grid-cols-2 items-center gap-4 py-10  sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 ">
+            <div
+              className="grid grid-cols-2 items-center gap-4 py-8  sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 "
+              role="list"
+              aria-label="List of professional skills"
+              tabIndex="0"
+            >
               {SKILLS.map((skill) => (
                 <Skill
                   key={skill.name}
@@ -48,7 +56,12 @@ function Main() {
                 Explore my <span className="text-green">latest Projects</span>
               </h3>
             </div>
-            <div className="grid grid-cols-1 gap-4 py-8 sm:grid-cols-2 ">
+            <div
+              className="grid grid-cols-1 gap-4 py-8 sm:grid-cols-2 "
+              role="list"
+              aria-label="List of latest projects"
+              tabIndex="0"
+            >
               {PROJECTS.map((project) => (
                 <Project
                   key={project.name}

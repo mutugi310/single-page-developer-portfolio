@@ -12,7 +12,11 @@ function About() {
         About <span>Me</span>
       </h2>
       <div className="grid sm:grid-cols-12 gap-10">
-        <div className="  flex items-center justify-center align-top sm:col-span-5">
+        <div
+          className="  flex items-center justify-center align-top sm:col-span-5"
+          role="image"
+          aria-label="dev portrait image"
+        >
           <div className=" ">
             <img
               src={portrait}
@@ -21,7 +25,11 @@ function About() {
             />
           </div>
         </div>
-        <div className="sm:col-span-7">
+        <div
+          className="sm:col-span-7"
+          role="text"
+          aria-label="about me writeup"
+        >
           <div className="flex flex-col justify-center text-center gap-4 pb-4">
             <h3 className="font-bold">
               Driven, <span className="text-green">Result-Oriented</span>
@@ -43,7 +51,11 @@ function About() {
             ))}
           </ul>
 
-          <div className="flex justify-center gap-4 mt-4 sm:justify-start ">
+          <div
+            className="flex justify-center gap-4 mt-4 sm:justify-start "
+            role="socials"
+            aria-label="social media icons"
+          >
             <Socials />
           </div>
 
