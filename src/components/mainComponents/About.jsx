@@ -13,19 +13,19 @@ function About() {
       </h2>
       <div className="grid sm:grid-cols-12 gap-10">
         <div className="  flex items-center justify-center align-top sm:col-span-5">
-          <div>
+          <div className=" ">
             <img
               src={portrait}
               alt="image of kelvin"
-              className="rounded-md border-2 border-green -mt-10"
+              className="rounded-md  hover:border-y-2 border-green md:-mt-10"
             />
           </div>
         </div>
         <div className="sm:col-span-7">
           <div className="flex flex-col justify-center text-center gap-4 pb-4">
-            <h3>
-              Driven, Result-Oriented
-              <br /> Front-End Developer
+            <h3 className="font-bold">
+              Driven, <span className="text-green">Result-Oriented</span>
+              <br /> <span className="text-green"> Front-End </span> Developer
             </h3>
           </div>
           <p className="text-md">{ABOUT_TEXT}</p>

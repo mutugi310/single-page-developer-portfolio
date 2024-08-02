@@ -13,7 +13,7 @@ function Header() {
   };
   return (
     <header className=" bg-black  w-full">
-      <div className=" sticky top-0 bg-black   py-2  z-30 ">
+      <div className=" sticky top-0 bg-black py-2  z-30 ">
         <nav className="container mx-auto flex justify-between w-full py-2 px-4   sm:px-15 lg:px-32">
           <ScrollLink to="hero-section" smooth="true" tabIndex="0">
             <img

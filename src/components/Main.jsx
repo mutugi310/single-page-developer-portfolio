@@ -42,13 +42,13 @@ function Main() {
 
         <Element name="project-section">
           <section className="py-10">
-            <div className="flex flex-col justify-center text-center gap-4">
-              <h2 className="font-bold text-2xl md:text-3xl lg:text-4xl text-center">
-                Projects
-              </h2>
-              <p>Explore my latest Projects</p>
+            <div className="flex flex-col justify-center text-center">
+              <h2 className="text-center">Projects</h2>
+              <h3 className="capitalize ">
+                Explore my <span className="text-green">latest Projects</span>
+              </h3>
             </div>
-            <div className="grid grid-cols-1  gap-4 py-8   sm:grid-cols-2 ">
+            <div className="grid grid-cols-1 gap-4 py-8 sm:grid-cols-2 ">
               {PROJECTS.map((project) => (
                 <Project
                   key={project.name}
