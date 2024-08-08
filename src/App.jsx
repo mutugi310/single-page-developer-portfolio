@@ -1,15 +1,15 @@
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
+import GoToTopButton from "./components/mainComponents/GoToTopButton";
 
 function App() {
   return (
     <>
-      <div className="relative">
-        <Header></Header>
-        <Main></Main>
-        <Footer></Footer>
-      </div>
+      <Header></Header>
+      <Main></Main>
+      <GoToTopButton />
+      <Footer></Footer>
     </>
   );
 }

@@ -16,7 +16,7 @@ function Main() {
       <div className="  absolute top-[50rem] -right-[12rem] w-[24rem] max-h-[4rem] z-100 opacity-3 rounded-full sm:-right-[16rem] md:-right-[12rem] md:top-[20rem] lg:-right-[14rem] lg:top-[12rem]">
         <img src={rightOvals} alt="ovals overlay" />
       </div>
-      <div className="container relative mx-auto px-4 sm:px-15 lg:px-32">
+      <div className="container  mx-auto px-4  sm:px-15 lg:px-32">
         <Element name="about-section">
           <section
             className="py-6 border-t-[1.5px] border-t-gray rounded-sm "
@@ -52,7 +52,7 @@ function Main() {
           <section className="py-10">
             <div className="flex flex-col justify-center text-center">
               <h2 className="text-center">Projects</h2>
-              <h3 className="capitalize ">
+              <h3 className="capitalize text-lg ">
                 Explore my <span className="text-green">latest Projects</span>
               </h3>
             </div>

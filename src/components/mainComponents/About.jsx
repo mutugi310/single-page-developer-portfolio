@@ -31,7 +31,7 @@ function About() {
           aria-label="about me writeup"
         >
           <div className="flex flex-col justify-center text-center gap-4 pb-4">
-            <h3 className="font-bold">
+            <h3 className="font-bold text-lg">
               Driven, <span className="text-green">Result-Oriented</span>
               <br /> <span className="text-green"> Front-End </span> Developer
             </h3>
@@ -40,14 +40,12 @@ function About() {
           <h4 className="pl-1 py-1">I take pride in, inter alia;</h4>
           <ul className="pl-2 text-sm list-none ">
             {ABOUT_EXPERT.map((bullet, index) => (
-              <>
-                <li key={index} className="flex flex-nowrap gap-2 ">
-                  <span className="  pt-1">
-                    <CgRadioChecked className="w-3 text-green" />
-                  </span>
-                  {bullet}
-                </li>
-              </>
+              <li key={index} className="flex flex-nowrap gap-2 ">
+                <span className="  pt-1">
+                  <CgRadioChecked className="w-3 text-green" />
+                </span>
+                {bullet}
+              </li>
             ))}
           </ul>
 
