@@ -8,7 +8,7 @@ import { CgRadioChecked } from "react-icons/cg";
 function About() {
   return (
     <>
-      <h2 className="text-center">
+      <h2 className="text-center  md:pl-7">
         About <span>Me</span>
       </h2>
       <div className="grid sm:grid-cols-12 gap-10">
@@ -30,7 +30,7 @@ function About() {
           role="text"
           aria-label="about me writeup"
         >
-          <div className="flex flex-col justify-center text-center gap-4 pb-4">
+          <div className="flex flex-col justify-center text-center gap-4 pb-4 md:text-start">
             <h3 className="font-bold text-lg">
               Driven, <span className="text-green">Result-Oriented</span>
               <br /> <span className="text-green"> Front-End </span> Developer
