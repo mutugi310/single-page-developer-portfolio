@@ -2,23 +2,35 @@ import React from "react";
 import Socials from "./sharedComponents/Socials";
 import { Link as ScrollLink } from "react-scroll";
 import logo from "../assets/kelvinMutugi.svg";
+import { useAnimateInView } from "../hooks/useAnimateInView";
+import { motion } from "framer-motion";
 
 function Footer() {
+  const { text2Variant, textVariants, containerVariants } = useAnimateInView();
   return (
     <footer className="bg-black-light">
       <div className="container mx-auto px-4 sm:px-15 lg:px-32">
         <div className="pt-16 pb-4">
           <section className="flex flex-col py-4 w-full gap-4 items-center md:flex-row md:justify-between  ">
-            <nav>
+            <motion.nav
+              initial="hidden"
+              whileInView="visible"
+              variants={containerVariants}
+              viewport={{ once: true }}
+            >
               <ScrollLink to="hero-section" smooth="true" tabIndex="0">
-                <img
+                <motion.img
+                  variants={textVariants}
                   src={logo}
                   alt="kelvin mutugi logo"
                   className="max-h-6 cursor-pointer"
                 />
               </ScrollLink>
 
-              <ul className=" flex flex-col justify-center gap-3 items-center md:flex-row md:justify-evenly  ">
+              <motion.ul
+                variants={textVariants}
+                className=" flex flex-col justify-center gap-3 items-center md:flex-row md:justify-evenly  "
+              >
                 <li>
                   <ScrollLink
                     to="hero-section"
@@ -63,15 +75,21 @@ function Footer() {
                     Projects
                   </ScrollLink>
                 </li>
-              </ul>
-            </nav>
+              </motion.ul>
+            </motion.nav>
             <div className="flex justify-evenly gap-4  ">
               <Socials bgColor="bg-black" />
             </div>
           </section>
-          <section className="flex justify-center ">
+          <motion.section
+            initial="hidden"
+            whileInView="visible"
+            variants={text2Variant}
+            viewport={{ once: true }}
+            className="flex justify-center "
+          >
             &copy; kelvin {new Date().getFullYear()}
-          </section>
+          </motion.section>
         </div>
       </div>
     </footer>

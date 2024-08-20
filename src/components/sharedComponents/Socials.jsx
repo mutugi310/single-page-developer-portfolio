@@ -33,12 +33,13 @@ function Socials({ bgColor = "bg-black-light" }) {
       {socialIons.map((social, i) => (
         <motion.a
           initial={{ opacity: 0, y: reduceMotion ? 0 : i === 0 ? 0 : -i * 40 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{
             duration: 0.5,
             ease: "easeInOut",
             delay: reduceMotion ? 0 : i * 0.2,
           }}
+          viewport={{ once: true }}
           key={social.name}
           href={social.href}
           target="_blank"

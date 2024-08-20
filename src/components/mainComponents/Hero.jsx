@@ -7,31 +7,32 @@ import Socials from "../sharedComponents/Socials";
 import { HERO_TEXT } from "../../constants/data";
 import { motion, useReducedMotion } from "framer-motion";
 
-const ctaHeroText = "Let's build something amazing together !";
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.05,
-    },
-  },
-};
-
-const letterVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
-
 function Hero() {
+  const reduceMotion = useReducedMotion();
+  const ctaHeroText = "Let's build something amazing together !";
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.05,
+      },
+    },
+  };
+
+  const letterVariants = {
+    hidden: { opacity: 0, y: reduceMotion ? 0 : 20 },
+    visible: { opacity: 1, y: 0 },
+  };
   return (
     <Element name="hero-section">
-      <div className="grid relative grid-cols-1 gap-8 pt-6 md:grid-cols-12 justify-between">
+      <div className="grid  relative grid-cols-1 gap-8 pt-6 pb-2 md:grid-cols-12 justify-between">
         <div className="absolute top-[3rem] -left-[15rem] w-[24rem] max-h-[4rem] z-20 md:top-[3rem] md:-left-[12rem] md:w-[24rem] md:max-h-[3rem] md:z-10 opacity-3 rounded-full sm:-left-[10rem] lg:-left-[2rem]">
           <motion.img
             src={leftOvals}
             alt="ovals overlay"
-            initial={{ opacity: 0, x: -100 }}
+            initial={{ opacity: 0, x: reduceMotion ? 0 : -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
           />
@@ -44,7 +45,7 @@ function Hero() {
             <div className="relative z-9 w-2/3 mx-auto grow sm:w-[50%]">
               <motion.div
                 className="absolute border-4 border-green w-full rounded-full bottom-0 top-8 right-0 z-9"
-                initial={{ scale: 0 }}
+                initial={{ scale: reduceMotion ? 1 : 0 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.8 }}
               ></motion.div>
@@ -52,7 +53,7 @@ function Hero() {
                 src={portrait}
                 alt="developer portrait"
                 className="w-full relative rounded-full pb-1 z-10"
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: reduceMotion ? 1 : 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1 }}
               />
@@ -63,8 +64,9 @@ function Hero() {
                 <motion.span
                   className="text-lg"
                   initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  whileInView={{ opacity: 1 }}
                   transition={{ duration: 1 }}
+                  viewport={{ once: true }}
                 >
                   Hello{" "}
                   <motion.span
@@ -87,9 +89,10 @@ function Hero() {
                 <br />
                 <motion.span
                   className="tracking-wide bg-gradient-custom bg-clip-text text-transparent underline underline-offset-8 decoration-green decoration-2 bold"
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, x: reduceMotion ? 0 : -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1 }}
+                  viewport={{ once: true }}
                 >
                   Kelvin Mutugi
                 </motion.span>
@@ -97,16 +100,18 @@ function Hero() {
               </h1>
               <motion.p
                 className="mb-4 text-lg text-center sm:text-left"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: reduceMotion ? 0 : 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
+                viewport={{ once: true }}
               >
                 {HERO_TEXT}
               </motion.p>
               <motion.p
                 variants={containerVariants}
                 initial="hidden"
-                animate="visible"
+                whileInView="visible"
+                viewport={{ once: true }}
               >
                 {ctaHeroText.split("").map((char, i) => (
                   <motion.span key={i} variants={letterVariants}>
@@ -117,9 +122,10 @@ function Hero() {
               <div className="flex flex-col py-2 gap-4">
                 <motion.div
                   className="flex flex-col pt-2 gap-2 items-center sm:flex-row sm:gap-4"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: reduceMotion ? 0 : 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 1 }}
+                  viewport={{ once: true }}
                 >
                   <ScrollLink
                     to="contact-section"
@@ -141,9 +147,10 @@ function Hero() {
                 </motion.div>
                 <motion.div
                   className="flex justify-start gap-2 mt-4 md:hidden"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: reduceMotion ? 0 : 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 1.2 }}
+                  viewport={{ once: true }}
                 >
                   <Socials />
                 </motion.div>

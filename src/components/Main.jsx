@@ -1,5 +1,5 @@
-import React from "react";
-import Skill from "./mainComponents/Skill";
+import React, { useRef } from "react";
+import Skills from "./mainComponents/Skills";
 import About from "./mainComponents/About";
 import data from "../assets/data/data.json";
 import testProjectImg from "../assets/testProject.jpg";
@@ -9,12 +9,23 @@ import Contact from "./mainComponents/Contact";
 import rightOvals from "../assets/ovals-right.png";
 import { SKILLS, PROJECTS } from "../constants/data";
 import { Element } from "react-scroll";
+import { motion, useReducedMotion } from "framer-motion";
+import { useAnimateInView } from "../hooks/useAnimateInView";
 
 function Main() {
+  const { text2Variant, containerVariants, reduceMotion } = useAnimateInView();
+
   return (
     <main className="relative w-full overflow-hidden">
       <div className="  absolute top-[50rem] -right-[12rem] w-[24rem] max-h-[4rem] z-100 opacity-3 rounded-full sm:-right-[16rem] md:-right-[12rem] md:top-[20rem] lg:-right-[14rem] lg:top-[12rem]">
-        <img src={rightOvals} alt="ovals overlay" />
+        <motion.img
+          initial={{ opacity: 0, x: reduceMotion ? 0 : 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          src={rightOvals}
+          alt="ovals overlay"
+        />
       </div>
       <div className="container  mx-auto px-4  sm:px-15 lg:px-32">
         <Element name="about-section">
@@ -27,52 +38,44 @@ function Main() {
         </Element>
 
         <Element name="skills-section">
-          <section className=" border-y-[1.5px] border-y-gray pt-10 ">
-            <h2 className="text-center">Professional Skills</h2>
-            <div
-              className="grid grid-cols-2 items-center gap-4 py-8  sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 "
-              role="list"
-              aria-label="List of professional skills"
-              tabIndex="0"
-            >
-              {SKILLS.map((skill) => (
-                <Skill
-                  key={skill.name}
-                  icon={skill.icon}
-                  skill={skill.name}
-                  experience={skill.experienceYrs}
-                  className={skill.className}
-                />
-              ))}
-            </div>
-          </section>
+          <Skills />
         </Element>
 
         <Element name="project-section">
           <section className="py-10">
             <div className="flex flex-col justify-center text-center">
-              <h2 className="text-center">Projects</h2>
-              <h3 className="capitalize text-lg ">
-                Explore my <span className="text-green">latest Projects</span>
-              </h3>
+              <motion.h2
+                initial="hidden"
+                whileInView="visible"
+                variants={text2Variant}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                Latest <span className="text-green">Projects</span>
+              </motion.h2>
             </div>
-            <div
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              variants={containerVariants}
+              viewport={{ once: true }}
               className="grid grid-cols-1 gap-4 py-8 sm:grid-cols-2 "
               role="list"
               aria-label="List of latest projects"
               tabIndex="0"
             >
-              {PROJECTS.map((project) => (
+              {PROJECTS.map((project, index) => (
                 <Project
+                  index={index}
                   key={project.name}
                   name={project.name}
                   alt={project.name}
                   techStack={project.techStack}
                   gitHub={project.gitHub}
                   hosted={project.hosted}
-                />
+                ></Project>
               ))}
-            </div>
+            </motion.div>
           </section>
         </Element>
       </div>

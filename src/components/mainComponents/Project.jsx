@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Button } from "react-scroll";
 import defaultImg from "../../assets/testProject.jpg";
+import { motion } from "framer-motion";
+import { useAnimateInView } from "../../hooks/useAnimateInView";
 
-function Project({ name, alt, gitHub, hosted, techStack }) {
+function Project({ name, alt, gitHub, hosted, techStack, index }) {
   //set initial image source
   const [imgSrc, setImgSrc] = useState(
     new URL(`../../assets/projectImgs/${name}.png`, import.meta.url).href
@@ -11,6 +13,9 @@ function Project({ name, alt, gitHub, hosted, techStack }) {
   const handleError = () => {
     setImgSrc(defaultImg);
   };
+  //use useAnimate custom hook for animations
+  const { textVariants, reduceMotion } = useAnimateInView();
+
   //ref
   const articleRef = useRef(null);
   const linksRef = useRef(null);
@@ -31,19 +36,25 @@ function Project({ name, alt, gitHub, hosted, techStack }) {
   }, []);
 
   return (
-    <article
+    <motion.article
+      variants={textVariants}
       className="relative group py-4 rounded-lg shadow "
       ref={articleRef}
       tabIndex="0"
     >
-      <div>
+      <motion.div
+        initial={{ scale: reduceMotion ? 0 : 0.8 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 1, delay: index * 0.2 }}
+        viewport={{ once: true }}
+      >
         <img
           src={imgSrc}
           alt={alt}
           onError={handleError}
           className=" w-full min-h-40"
         />
-      </div>
+      </motion.div>
 
       <h3 className="py-2 ">{name}</h3>
 
@@ -78,7 +89,7 @@ function Project({ name, alt, gitHub, hosted, techStack }) {
           View code
         </a>
       </div>
-    </article>
+    </motion.article>
   );
 }
 

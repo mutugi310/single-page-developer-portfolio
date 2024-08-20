@@ -14,13 +14,13 @@ import {
 export const HERO_TEXT =
   "Passionate Front-End Developer and AWS Cloud practitioner crafting seamless user experiences with modern web technologies.";
 export const ABOUT_TEXT =
-  "As a result-oriented front-end developer with a strong foundation in web development and cloud computing, I excel in creating dynamic, responsive, and accessible web applications. My expertise spans across various aspects of web development and AWS cloud services, always aiming to deliver high-quality, user-centric, and impactful digital solutions while maintaining highly-available, scalable, and secure systems.";
+  "As a result-oriented front-end developer with a strong foundation in web development and AWS cloud computing, I'm always aiming to deliver high-quality, user-centric, and impactful digital solutions while maintaining responsive, accessible, highly-available, scalable, and secure systems.";
 export const ABOUT_TEXT_Bottom =
   "My passion for web development and cloud computing drives me to continually learn and implement the latest technologies, ensuring that the solutions I deliver are both innovative and effective.";
 export const ABOUT_EXPERT = [
   "Developing responsive web applications using modern frameworks, improving user experience and performance.",
   "Developing highly interactive user interfaces, enhancing user engagement and satisfaction.",
-  "Integrating third-party services such as AWS, leveraging cloud computing to optimize application performance and reliability.",
+  "Integrating third-party services such as AWS, leveraging cloud computing to optimize application performance, availability, and reliability.",
   "Improving website loading times by upto 30% through performance optimization techniques.",
   "Implementing accessibility best practices, ensuring inclusive and user-friendly web experiences.",
   "Continually learning and aspiring to implement the latest technologies.",

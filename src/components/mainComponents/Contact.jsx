@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import leftOvals from "../../assets/ovals-left.png";
+import { motion, useReducedMotion } from "framer-motion";
+import { useAnimateInView } from "../../hooks/useAnimateInView";
 
 function Contact() {
   /* const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState(""); */
-
+  const reduceMotion = useReducedMotion();
+  const { text2Variant, textVariants, containerVariants } = useAnimateInView();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -64,60 +67,108 @@ function Contact() {
   return (
     <>
       <div className="w-full flex flex-col h-full gap-8 items-center text-center align-top sm:w-2/3 mx-auto md:w-full  md:items-start md:text-start ">
-        <h2 className="font-bold text-4xl md:text-5xl lg:text-6xl ">Contact</h2>
-        <p>
+        <motion.h2
+          initial="hidden"
+          whileInView="visible"
+          variants={text2Variant}
+          viewport={{ once: true }}
+          className="font-bold text-4xl md:text-5xl lg:text-6xl "
+        >
+          Contact
+        </motion.h2>
+        <motion.p
+          initial="hidden"
+          whileInView="visible"
+          variants={textVariants}
+          viewport={{ once: true }}
+        >
           I would love to hear about your project and how I could help. Please
           fill in the form, and I’ll get back to you as soon as possible.
-        </p>
+        </motion.p>
       </div>
 
       <div className="w-full flex flex-col sm:w-2/3 mx-auto md:w-full  ">
-        <form className="w-full " onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            value={formData.name}
-            onChange={handleChange}
-            className="bg-black-light py-4 w-full border-b-white border-b-2 pl-4 
+        <motion.form className="w-full " onSubmit={handleSubmit}>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={textVariants}
+            viewport={{ once: true }}
+          >
+            <label
+              htmlFor="name"
+              className="absolute w-px h-px -m-px overflow-hidden whitespace-nowrap border-0"
+            >
+              Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              value={formData.name}
+              onChange={handleChange}
+              className="bg-black-light py-4 w-full border-b-white border-b-2 pl-4 
           focus:border-b-green focus:outline-none "
-          />{" "}
-          <br />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
-            onChange={handleChange}
-            className="bg-black-light peer  py-4 w-full border-b-white border-b-2 mt-4 pl-4 
+            />
+            <br />
+            <label
+              htmlFor="email"
+              className="absolute w-px h-px -m-px overflow-hidden whitespace-nowrap border-0"
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={handleChange}
+              className="bg-black-light peer  py-4 w-full border-b-white border-b-2 mt-4 pl-4 
           focus:border-b-green focus:outline-none  invalid:border-b- invalid:border-b-2 invalid:text-[#FF6F5B]
           "
-          />{" "}
-          <br />
-          <p className="text-sm text-end text-[#FF6F5B] mt-2 invisible  peer-invalid:visible ">
-            Sorry, invalid format here
-          </p>
-          <textarea
-            name="message"
-            placeholder="Message"
-            value={formData.message}
-            onChange={handleChange}
-            className="bg-black-light py-4 w-full border-b-white border-b-2 mt-4 pl-4
-            focus:border-b-green focus:outline-none  "
-          ></textarea>
-          <br />
-          <div className="flex justify-end">
-            <button
-              type="submit"
-              className="uppercase border-b-2 w-fit border-green my-2 hover:text-green hover:font-bold"
+            />
+            <br />
+            <p className="text-sm text-end text-[#FF6F5B] mt-2 invisible  peer-invalid:visible ">
+              Sorry, invalid format here
+            </p>
+            <label
+              htmlFor="message"
+              className="absolute w-px h-px -m-px overflow-hidden whitespace-nowrap border-0"
             >
-              Send Message
-            </button>
+              Message
+            </label>
+            <textarea
+              name="message"
+              placeholder="Message"
+              id="message"
+              value={formData.message}
+              onChange={handleChange}
+              className="bg-black-light py-4 w-full border-b-white border-b-2 mt-4 pl-4
+            focus:border-b-green focus:outline-none  "
+            ></textarea>
+            <br />
+            <div className="flex justify-end">
+              <button
+                type="submit"
+                className="uppercase border-b-2 w-fit border-green my-2 hover:text-green hover:font-bold"
+              >
+                Send Message
+              </button>
+            </div>
+          </motion.div>
+          <div className="absolute bottom-[4rem] -left-[12rem] w-[24rem] max-h-[4rem] z-100 opacity-3 rounded-full sm:[10rem] lg:-left-[6rem]">
+            <motion.img
+              initial={{ opacity: 0, scale: reduceMotion ? 1 : 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              src={leftOvals}
+              alt="ovals overlay"
+            />
           </div>
-          <div className="  absolute bottom-[4rem] -left-[12rem] w-[24rem] max-h-[4rem] z-100 opacity-3 rounded-full sm:[10rem] lg:-left-[6rem]">
-            <img src={leftOvals} alt="ovals overlay" />
-          </div>
-        </form>
+        </motion.form>
         <span>{result}</span>
       </div>
     </>
