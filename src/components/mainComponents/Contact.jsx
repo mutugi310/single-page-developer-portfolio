@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
 import leftOvals from "../../assets/ovals-left.png";
 import { motion, useReducedMotion } from "framer-motion";
 import { useAnimateInView } from "../../hooks/useAnimateInView";
@@ -8,14 +10,12 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState(""); */
   const reduceMotion = useReducedMotion();
-  const { text2Variant, textVariants, containerVariants } = useAnimateInView();
+  const { text2Variant, textVariants } = useAnimateInView();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
-
-  const [result, setResult] = useState("");
 
   const handleChange = (e) => {
     setFormData({
@@ -26,7 +26,8 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setResult("Sending...");
+
+    toast.info("Sending...");
 
     const form = new FormData();
     form.append("name", formData.name);
@@ -44,7 +45,7 @@ function Contact() {
       if (!response.ok) {
         const errorText = await response.text();
         console.error("Error response:", errorText);
-        setResult("Failed to submit the form.");
+        toast.error("Failed to submit the form.");
         return;
       }
 
@@ -52,15 +53,15 @@ function Contact() {
       const data = await response.json();
 
       if (data.success) {
-        setResult("Form Submitted Successfully");
         setFormData({ name: "", email: "", message: "" });
+        toast.success("Form Submitted Successfully");
       } else {
         console.log("Error", data);
-        setResult(data.message);
+        toast.error(data.message);
       }
     } catch (error) {
       console.error("Error submitting form", error);
-      setResult("An error occurred while submitting the form.");
+      toast.error("An error occurred while submitting the form.");
     }
   };
 
@@ -168,8 +169,8 @@ function Contact() {
               alt="ovals overlay"
             />
           </div>
+          <ToastContainer></ToastContainer>
         </motion.form>
-        <span>{result}</span>
       </div>
     </>
   );

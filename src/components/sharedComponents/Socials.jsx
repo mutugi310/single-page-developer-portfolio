@@ -5,22 +5,22 @@ import { useReducedMotion, motion, easeInOut } from "framer-motion";
 const socialIons = [
   {
     name: "Github Profile",
-    href: "https://www.linkedin.com/in/mutugikelvin",
+    href: "https://github.com/mutugi310",
     Icon: FaGithub,
-  },
-  {
-    name: "Medium Profile",
-    href: "https://www.linkedin.com/in/mutugikelvin",
-    Icon: FaLinkedin,
   },
   {
     name: "LinkedIn Profile",
     href: "https://www.linkedin.com/in/mutugikelvin",
-    Icon: FaXTwitter,
+    Icon: FaLinkedin,
   },
   {
     name: "X Profile",
-    href: "https://www.linkedin.com/in/mutugikelvin",
+    href: "https://x.com/KevMutugi?t=-iCJKi2ijV4q4o3nkJ_hyg&s=08",
+    Icon: FaXTwitter,
+  },
+  {
+    name: "Medium Profile",
+    href: "https://medium.com/@kelvinmutugi210",
     Icon: FaMedium,
   },
 ];

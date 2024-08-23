@@ -6,6 +6,7 @@ import leftOvals from "../../assets/ovals-left.png";
 import Socials from "../sharedComponents/Socials";
 import { HERO_TEXT } from "../../constants/data";
 import { motion, useReducedMotion } from "framer-motion";
+import { ReactTyped } from "react-typed";
 
 function Hero() {
   const reduceMotion = useReducedMotion();
@@ -105,7 +106,17 @@ function Hero() {
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
               >
-                {HERO_TEXT}
+                Passionate{" "}
+                <span className="text-green">
+                  <ReactTyped
+                    strings={["Front-End Developer", "AWS Cloud Practitioner"]}
+                    typeSpeed={60}
+                    backSpeed={50}
+                    loop
+                  />
+                </span>{" "}
+                <br />
+                crafting seamless user experiences with modern web technologies.
               </motion.p>
               <motion.p
                 variants={containerVariants}

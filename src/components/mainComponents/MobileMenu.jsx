@@ -6,7 +6,7 @@ import { IoMdClose } from "react-icons/io";
 function MobileMenu({ onClose }) {
   return (
     <>
-      <nav className="absolute right-0 top-0 rounded-md flex flex-col justify-center items-center gap-4 bg-black py-7 w-1/2 h-2/3  ">
+      <nav className="absolute right-0 top-0 rounded-md flex flex-col justify-center items-center gap-4 bg-black py-8 min-w-1/2 max-h-2/3  ">
         <div
           className=" cursor-pointer absolute right-2 top-2 bg-black-light p-1 rounded-sm hover:text-green hover:scale-105 focus:text-green focus:scale-105"
           onClick={onClose}
@@ -76,7 +76,7 @@ function MobileMenu({ onClose }) {
           </li>
         </ul>
         <h3 className="uppercase  text-center pr-2 mt-4">Find Me</h3>
-        <div className="flex justify-start gap-4  border-y-2 border-y-green py-2 rounded-sm ">
+        <div className="flex justify-start gap-4  border-y-2 border-y-green py-2 px-2 rounded-sm ">
           <a
             href="https://www.linkedin.com/in/mutugikelvin"
             target="_blank"
