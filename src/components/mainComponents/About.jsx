@@ -73,9 +73,7 @@ function About() {
               <br /> <span className="text-green"> Front-End </span> Developer
             </h3>
           </motion.div>
-          <motion.p variants={textVariants} className="text-md">
-            {ABOUT_TEXT}
-          </motion.p>
+          <motion.p variants={textVariants}>{ABOUT_TEXT}</motion.p>
           <motion.h4 variants={textVariants} className="pl-1 py-1">
             I take pride in, inter alia;
           </motion.h4>
