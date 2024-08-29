@@ -29,7 +29,7 @@ function Hero() {
   return (
     <Element name="hero-section">
       <div className="grid  relative grid-cols-1 gap-8 pt-6 pb-2 md:grid-cols-12 justify-between">
-        <div className="absolute top-[3rem] -left-[15rem] w-[24rem] max-h-[4rem] z-20 md:top-[3rem] md:-left-[12rem] md:w-[24rem] md:max-h-[3rem] md:z-10 opacity-3 rounded-full sm:-left-[10rem] lg:-left-[2rem]">
+        <div className="absolute top-[3rem] -left-[15rem] w-[24rem] max-h-[4rem] z-20 md:top-[3rem] md:-left-[12rem] md:w-[24rem] md:max-h-[3rem] md:z-10 opacity-3 rounded-full  lg:-left-[2rem]">
           <motion.img
             src={leftOvals}
             alt="ovals overlay"
