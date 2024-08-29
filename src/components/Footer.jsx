@@ -1,43 +1,96 @@
 import React from "react";
-import { FaGithub, FaMedium, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import Socials from "./sharedComponents/Socials";
+import { Link as ScrollLink } from "react-scroll";
+import logo from "../assets/kelvinMutugi.svg";
+import { useAnimateInView } from "../hooks/useAnimateInView";
+import { motion } from "framer-motion";
 
 function Footer() {
+  const { text2Variant, textVariants, containerVariants } = useAnimateInView();
   return (
     <footer className="bg-black-light">
-      <div className="container mx-auto   px-4 sm:px-15 lg:px-32">
-        <section className="flex flex-col border-t-[1.5px] border-t-gray py-16  w-full gap-4 items-center lg:flex-row lg:justify-between  ">
-          <p className="text-2xl text-center">mutugiKelvin</p>
-          <div className="flex justify-evenly gap-4  ">
-            <a
-              href="https://www.linkedin.com/in/mutugikelvin"
-              target="_blank"
-              rel="noopener noreferrer"
+      <div className="container mx-auto px-4 sm:px-15 lg:px-32">
+        <div className="pt-16 pb-4">
+          <section className="flex flex-col py-4 w-full gap-4 items-center md:flex-row md:justify-between  ">
+            <motion.nav
+              initial="hidden"
+              whileInView="visible"
+              variants={containerVariants}
+              viewport={{ once: true }}
             >
-              <FaGithub className="size size-4 sm:size-6" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/mutugikelvin"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaMedium className="size size-4 sm:size-6" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/mutugikelvin"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin className="size size-4 sm:size-6" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/mutugikelvin"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaXTwitter className="size size-4 sm:size-6" />
-            </a>
-          </div>
-        </section>
+              <ScrollLink to="hero-section" smooth="true" tabIndex="0">
+                <motion.img
+                  variants={textVariants}
+                  src={logo}
+                  alt="kelvin mutugi logo"
+                  className="max-h-6 cursor-pointer"
+                />
+              </ScrollLink>
+
+              <motion.ul
+                variants={textVariants}
+                className=" flex flex-col justify-center gap-3 items-center md:flex-row md:justify-evenly  "
+              >
+                <li>
+                  <ScrollLink
+                    to="hero-section"
+                    smooth="true"
+                    tabIndex="0"
+                    activeClass="active"
+                    className="text-md cursor-pointer hover:border-b-2 hover:border-b-green focus:border-b-2 focus:border-b-green  active:text-green"
+                  >
+                    Home
+                  </ScrollLink>
+                </li>
+                <li>
+                  <ScrollLink
+                    to="about-section"
+                    smooth="true"
+                    tabIndex="0"
+                    activeClass="active"
+                    className="text-md cursor-pointer hover:border-b-2 hover:border-b-green focus:border-b-2 focus:border-b-green  active:text-green"
+                  >
+                    About
+                  </ScrollLink>
+                </li>
+                <li>
+                  <ScrollLink
+                    to="skills-section"
+                    smooth="true"
+                    tabIndex="0"
+                    activeClass="active"
+                    className="text-md cursor-pointer hover:border-b-2 hover:border-b-green focus:border-b-2 focus:border-b-green  active:text-green"
+                  >
+                    Skills
+                  </ScrollLink>
+                </li>
+                <li>
+                  <ScrollLink
+                    to="project-section"
+                    smooth="true"
+                    tabIndex="0"
+                    activeClass="active"
+                    className="text-md cursor-pointer hover:border-b-2 hover:border-b-green focus:border-b-2 focus:border-b-green  active:text-green"
+                  >
+                    Projects
+                  </ScrollLink>
+                </li>
+              </motion.ul>
+            </motion.nav>
+            <div className="flex justify-evenly gap-4  ">
+              <Socials bgColor="bg-black" />
+            </div>
+          </section>
+          <motion.section
+            initial="hidden"
+            whileInView="visible"
+            variants={text2Variant}
+            viewport={{ once: true }}
+            className="flex justify-center "
+          >
+            &copy; kelvin {new Date().getFullYear()}
+          </motion.section>
+        </div>
       </div>
     </footer>
   );
