@@ -4,7 +4,6 @@ import { GoDownload } from "react-icons/go";
 import portrait from "../../assets/dev-portrait_bgTest.png";
 import leftOvals from "../../assets/ovals-left.png";
 import Socials from "../sharedComponents/Socials";
-import { HERO_TEXT } from "../../constants/data";
 import { motion, useReducedMotion } from "framer-motion";
 import { ReactTyped } from "react-typed";
 
@@ -29,7 +28,7 @@ function Hero() {
   return (
     <Element name="hero-section">
       <div className="grid  relative grid-cols-1 gap-8 pt-6 pb-2 md:grid-cols-12 justify-between">
-        <div className="absolute top-[3rem] -left-[15rem] w-[24rem] max-h-[4rem] z-20 md:top-[3rem] md:-left-[12rem] md:w-[24rem] md:max-h-[3rem] md:z-10 opacity-3 rounded-full  lg:-left-[6rem]">
+        <div className="absolute top-[3rem] -left-[15rem] w-[24rem] max-h-[4rem] z-20 sm:max-h-[3rem] sm:z-10 opacity-3 rounded-full ">
           <motion.img
             src={leftOvals}
             alt="ovals overlay"

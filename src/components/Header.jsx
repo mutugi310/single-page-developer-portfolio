@@ -92,7 +92,7 @@ function Header() {
                 smooth="true"
                 tabIndex="0"
                 activeClass="active"
-                className="text-md cursor-pointer hover:border-b-2 hover:border-b-green focus:border-b-2 focus:border-b-green  active:text-green"
+                className="text-base cursor-pointer hover:border-b-2 hover:border-b-green focus:border-b-2 focus:border-b-green  active:text-green"
               >
                 About
               </ScrollLink>
@@ -103,7 +103,7 @@ function Header() {
                 smooth="true"
                 tabIndex="0"
                 activeClass="active"
-                className="text-md cursor-pointer hover:border-b-2 hover:border-b-green focus:border-b-2 focus:border-b-green  active:text-green"
+                className="text-base cursor-pointer hover:border-b-2 hover:border-b-green focus:border-b-2 focus:border-b-green  active:text-green"
               >
                 Skills
               </ScrollLink>
