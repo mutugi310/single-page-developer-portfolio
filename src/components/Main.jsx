@@ -30,7 +30,7 @@ function Main() {
       <div className="container  mx-auto px-4  sm:px-15 lg:px-32">
         <Element name="about-section">
           <section
-            className="py-12  border-t-[1.5px] border-t-gray rounded-sm "
+            className=" bg-slate-900 pt-8 mt-6 border-t-[1.5px] border-t-gray rounded-sm "
             tabIndex="0"
           >
             <About />
@@ -42,7 +42,7 @@ function Main() {
         </Element>
 
         <Element name="project-section">
-          <section className="py-12">
+          <section className=" bg-red-300 py-12">
             <div className="flex flex-col justify-center text-center">
               <motion.h2
                 initial="hidden"

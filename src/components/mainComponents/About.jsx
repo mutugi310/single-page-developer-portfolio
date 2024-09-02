@@ -20,22 +20,21 @@ function About() {
     },
   }; */
   const reduceMotion = useReducedMotion();
-  const { ref, text2Variant, textVariants, containerVariants } =
-    useAnimateInView();
+  const { text2Variant, textVariants, containerVariants } = useAnimateInView();
   return (
-    <div ref={ref}>
+    <div>
       <motion.h2
         initial="hidden"
         whileInView="visible"
         variants={text2Variant}
         viewport={{ once: true }}
-        className="text-center  md:pl-7"
+        className="text-center "
       >
         About <span className="text-green">Me</span>
       </motion.h2>
-      <div className="grid md:grid-cols-12 gap-10">
+      <div className=" mb-20 grid gap-5 sm:max-lg:grid-cols-2  lg:grid-cols-12 lg:gap-6">
         <div
-          className="  flex items-center justify-center align-top md:col-span-5"
+          className="sm:max-lg:col-span-1 sm:max-lg:row-span-2 lg:col-span-5 lg:row-span-4"
           role="image"
           aria-label="dev portrait image"
         >
@@ -51,7 +50,7 @@ function About() {
               viewport={{ once: true }}
               src={portrait}
               alt="image of kelvin"
-              className="rounded-md  hover:border-y-2 border-green md:-mt-20"
+              className="rounded-md hover:border-y-2 border-green sm:max-lg:max-w-xs lg:-mt-18 "
             />
           </div>
         </div>
@@ -60,24 +59,37 @@ function About() {
           whileInView="visible"
           variants={containerVariants}
           viewport={{ once: true }}
-          className="md:col-span-7"
+          className="flex flex-col sm:max-lg:justify-center sm:max-lg:mt-16 sm:max-lg:row-span-2  lg:col-span-7 lg:row-span-1 "
           role="text"
           aria-label="about me writeup"
         >
           <motion.div
             variants={textVariants}
-            className="flex flex-col justify-center text-center gap-4 pb-4 md:text-start"
+            className="flex justify-center gap-4 pb-4  sm:justify-start sm:max-lg:row-span-2 sm:pb-8 lg:col-span-7 "
           >
-            <h3 className="font-bold text-xl md:hidden">
+            <h3 className="font-bold text-xl lg:hidden">
               Driven, <span className="text-green">Result-Oriented</span>
               <br /> <span className="text-green"> Front-End </span> Developer
             </h3>
           </motion.div>
           <motion.p variants={textVariants}>{ABOUT_TEXT}</motion.p>
-          <motion.h4 variants={textVariants} className="pl-1 py-1">
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={containerVariants}
+          viewport={{ once: true }}
+          className="sm:max-lg:col-span-2 grid sm:max-lg:grid-cols-2 lg:col-span-7 lg:row-span-2"
+          role="bullets"
+          aria-label="my specialty"
+        >
+          <motion.h4
+            variants={textVariants}
+            className="pl-1 py-1 text-xl   sm:max-lg:col-span-2"
+          >
             I take pride in, inter alia;
           </motion.h4>
-          <ul className="pl-2  list-none ">
+          <ul className="pl-2  list-none grid gap-2 sm:max-lg:col-span-2 sm:max-lg:grid-cols-2 ">
             {ABOUT_EXPERT.map((bullet, index) => (
               <motion.li
                 initial="hidden"
@@ -94,23 +106,17 @@ function About() {
               </motion.li>
             ))}
           </ul>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={textVariants}
-            viewport={{ once: true }}
-            className="flex justify-start gap-4 mt-4  "
-            role="socials"
-            aria-label="social media icons"
-          >
-            <Socials />
-          </motion.div>
-
-          <p className="hidden ">
-            <span>site visits: 0</span>
-            interview likelihood score: 0
-          </p>
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={textVariants}
+          viewport={{ once: true }}
+          className="flex justify-start gap-4 lg:col-span-7 "
+          role="socials"
+          aria-label="social media icons"
+        >
+          <Socials />
         </motion.div>
       </div>
     </div>
