@@ -1,15 +1,12 @@
 import React, { useRef } from "react";
 import Skills from "./mainComponents/Skills";
 import About from "./mainComponents/About";
-import data from "../assets/data/data.json";
-import testProjectImg from "../assets/testProject.jpg";
-import Button from "./sharedComponents/Button";
 import Project from "./mainComponents/Project";
 import Contact from "./mainComponents/Contact";
 import rightOvals from "../assets/ovals-right.png";
-import { SKILLS, PROJECTS } from "../constants/data";
+import { PROJECTS } from "../constants/data";
 import { Element } from "react-scroll";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useAnimateInView } from "../hooks/useAnimateInView";
 
 function Main() {
@@ -30,7 +27,7 @@ function Main() {
       <div className="container  mx-auto px-4  sm:px-15 lg:px-32">
         <Element name="about-section">
           <section
-            className=" bg-slate-900 pt-8 mt-6 border-t-[1.5px] border-t-gray rounded-sm "
+            className="  pt-8 mt-8 border-t-[1.5px] border-t-gray rounded-sm "
             tabIndex="0"
           >
             <About />
@@ -42,7 +39,7 @@ function Main() {
         </Element>
 
         <Element name="project-section">
-          <section className=" bg-red-300 py-12">
+          <section className=" py-12">
             <div className="flex flex-col justify-center text-center">
               <motion.h2
                 initial="hidden"

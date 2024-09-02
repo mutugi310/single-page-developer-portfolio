@@ -85,6 +85,12 @@ export const SKILLS = [
     experienceYrs: calculateExperience(2023),
     className: "text-green h-6 w-6",
   },
+  {
+    icon: FaFigma,
+    name: "Figma",
+    experienceYrs: calculateExperience(2023),
+    className: "h-6 w-6",
+  },
 ];
 
 export const PROJECTS = [
@@ -109,7 +115,7 @@ export const PROJECTS = [
   {
     name: "Developer Portfolio",
     gitHub: "https://github.com/mutugi310/single-page-developer-portfolio",
-    hosted: "https://project1.com",
+    hosted: "https://mutugikelvin.netlify.app/",
     techStack: ["React", "Tailwind-CSS"],
   },
 ];

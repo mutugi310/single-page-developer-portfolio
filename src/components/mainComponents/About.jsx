@@ -85,7 +85,7 @@ function About() {
         >
           <motion.h4
             variants={textVariants}
-            className="pl-1 py-1 text-xl   sm:max-lg:col-span-2"
+            className="pl-1 py-1 text-xl sm:max-lg:col-span-2"
           >
             I take pride in, inter alia;
           </motion.h4>

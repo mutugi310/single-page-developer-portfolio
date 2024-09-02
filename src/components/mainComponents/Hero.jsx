@@ -156,8 +156,8 @@ function Hero() {
                       Contact Me
                     </ScrollLink>
                     <a
-                      href="../../assets/KelvinMutugi_Resume.pdf"
-                      download="KelvinMutugi_Resume.pdf"
+                      href="/Resume_KelvinMutugi.pdf"
+                      download="Resume_KelvinMutugi.pdf"
                       className="bg-black-light p-2 px-4 rounded-full uppercase w-fit border-b-2 my-2 hover:bg-black text-green tracking-wider border-green hover:text-white hover:font-bold focus:text-green focus:font-bold"
                     >
                       <span className="flex gap-2">

@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Button } from "react-scroll";
 import defaultImg from "../../assets/testProject.jpg";
 import { motion } from "framer-motion";
 import { useAnimateInView } from "../../hooks/useAnimateInView";
