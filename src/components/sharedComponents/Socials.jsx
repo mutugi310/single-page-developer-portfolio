@@ -47,7 +47,7 @@ function Socials({ bgColor = "bg-black-light" }) {
           title={social.name}
           className={`${bgColor} p-2  rounded-full hover:text-green hover:scale-110 focus:text-green focus:scale-110`}
         >
-          <social.Icon className="size-4 hover:scale-110" />
+          <social.Icon className="size-5 sm:size-6 hover:scale-110" />
         </motion.a>
       ))}
     </>

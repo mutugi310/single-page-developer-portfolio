@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 function Skills() {
   const { text2Variant, textVariants, containerVariants } = useAnimateInView();
   return (
-    <section className=" border-y-[1.5px] border-y-gray pt-10 ">
+    <section className=" border-y-[1.5px] border-y-gray py-12 ">
       <motion.h2
         initial="hidden"
         whileInView="visible"

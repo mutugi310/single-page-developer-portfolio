@@ -4,9 +4,12 @@
 
 @layer base {
   body {
-    @apply text-base leading-relaxed;
+    @apply text-base;
   }
   h2 {
     @apply text-2xl font-bold my-2 uppercase;
+  }
+  p {
+    @apply text-base sm:text-lg;
   }
 }

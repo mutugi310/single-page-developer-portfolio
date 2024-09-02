@@ -31,50 +31,24 @@ function Footer() {
                 variants={textVariants}
                 className=" flex flex-col justify-center gap-3 items-center md:flex-row md:justify-evenly  "
               >
-                <li>
-                  <ScrollLink
-                    to="hero-section"
-                    smooth="true"
-                    tabIndex="0"
-                    activeClass="active"
-                    className="text-md cursor-pointer hover:border-b-2 hover:border-b-green focus:border-b-2 focus:border-b-green  active:text-green"
-                  >
-                    Home
-                  </ScrollLink>
-                </li>
-                <li>
-                  <ScrollLink
-                    to="about-section"
-                    smooth="true"
-                    tabIndex="0"
-                    activeClass="active"
-                    className="text-md cursor-pointer hover:border-b-2 hover:border-b-green focus:border-b-2 focus:border-b-green  active:text-green"
-                  >
-                    About
-                  </ScrollLink>
-                </li>
-                <li>
-                  <ScrollLink
-                    to="skills-section"
-                    smooth="true"
-                    tabIndex="0"
-                    activeClass="active"
-                    className="text-md cursor-pointer hover:border-b-2 hover:border-b-green focus:border-b-2 focus:border-b-green  active:text-green"
-                  >
-                    Skills
-                  </ScrollLink>
-                </li>
-                <li>
-                  <ScrollLink
-                    to="project-section"
-                    smooth="true"
-                    tabIndex="0"
-                    activeClass="active"
-                    className="text-md cursor-pointer hover:border-b-2 hover:border-b-green focus:border-b-2 focus:border-b-green  active:text-green"
-                  >
-                    Projects
-                  </ScrollLink>
-                </li>
+                {[
+                  { name: "Home", to: "hero-section" },
+                  { name: "About", to: "about-section" },
+                  { name: "Skills", to: "skills-section" },
+                  { name: "Projects", to: "project-section" },
+                ].map((item) => (
+                  <li key={item.name}>
+                    <ScrollLink
+                      to={item.to}
+                      smooth="true"
+                      tabIndex="0"
+                      activeClass="active"
+                      className=" text-lg cursor-pointer hover:border-b-2 hover:border-b-green focus:border-b-2 focus:border-b-green  active:text-green"
+                    >
+                      {item.name}
+                    </ScrollLink>
+                  </li>
+                ))}
               </motion.ul>
             </motion.nav>
             <div className="flex justify-evenly gap-4  ">

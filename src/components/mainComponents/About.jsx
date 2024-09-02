@@ -33,9 +33,9 @@ function About() {
       >
         About <span className="text-green">Me</span>
       </motion.h2>
-      <div className="grid sm:grid-cols-12 gap-10">
+      <div className="grid md:grid-cols-12 gap-10">
         <div
-          className="  flex items-center justify-center align-top sm:col-span-5"
+          className="  flex items-center justify-center align-top md:col-span-5"
           role="image"
           aria-label="dev portrait image"
         >
@@ -60,7 +60,7 @@ function About() {
           whileInView="visible"
           variants={containerVariants}
           viewport={{ once: true }}
-          className="sm:col-span-7"
+          className="md:col-span-7"
           role="text"
           aria-label="about me writeup"
         >
@@ -68,7 +68,7 @@ function About() {
             variants={textVariants}
             className="flex flex-col justify-center text-center gap-4 pb-4 md:text-start"
           >
-            <h3 className="font-bold text-lg sm:hidden">
+            <h3 className="font-bold text-xl md:hidden">
               Driven, <span className="text-green">Result-Oriented</span>
               <br /> <span className="text-green"> Front-End </span> Developer
             </h3>
@@ -77,7 +77,7 @@ function About() {
           <motion.h4 variants={textVariants} className="pl-1 py-1">
             I take pride in, inter alia;
           </motion.h4>
-          <ul className="pl-2 text-sm list-none ">
+          <ul className="pl-2  list-none ">
             {ABOUT_EXPERT.map((bullet, index) => (
               <motion.li
                 initial="hidden"
@@ -100,7 +100,7 @@ function About() {
             whileInView="visible"
             variants={textVariants}
             viewport={{ once: true }}
-            className="flex justify-center gap-4 mt-4 sm:justify-start "
+            className="flex justify-start gap-4 mt-4  "
             role="socials"
             aria-label="social media icons"
           >
