@@ -118,4 +118,11 @@ export const PROJECTS = [
     hosted: "https://mutugikelvin.netlify.app/",
     techStack: ["React", "Tailwind-CSS"],
   },
+  /* {
+    name: "Company portfolio site",
+    gitHub: "https://uvudrones.com/",
+    hosted: "https://uvudrones.com/",
+    techStack: ["WordPress"],
+  } */
+  ,
 ];
