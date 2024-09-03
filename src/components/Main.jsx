@@ -24,10 +24,10 @@ function Main() {
           alt="ovals overlay"
         />
       </div>
-      <div className="container  mx-auto px-4  sm:px-15 lg:px-32">
+      <div className="container  mx-auto px-4 sm:px-15 lg:px-32">
         <Element name="about-section">
           <section
-            className="  pt-8 mt-8 border-t-[1.5px] border-t-gray rounded-sm "
+            className="pt-12 mt-8 border-t-[1.5px] border-t-gray rounded-sm "
             tabIndex="0"
           >
             <About />

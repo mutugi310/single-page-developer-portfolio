@@ -4,21 +4,10 @@ import portrait from "../../assets/dev-portrait_bgTest-L.png";
 import { ABOUT_TEXT, ABOUT_EXPERT } from "../../constants/data";
 import Socials from "../sharedComponents/Socials";
 import { CgRadioChecked } from "react-icons/cg";
-import { motion, useInView, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { useAnimateInView } from "../../hooks/useAnimateInView";
 
 function About() {
-  /* const ref = useRef(null);
-  const isInView = useInView(ref);
-  const reduceMotion = useReducedMotion();
-  const textVariants = {
-    hidden: { opacity: 0, y: reduceMotion ? 0 : 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: "easeInOut" },
-    },
-  }; */
   const reduceMotion = useReducedMotion();
   const { text2Variant, textVariants, containerVariants } = useAnimateInView();
   return (

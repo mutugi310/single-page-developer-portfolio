@@ -4,11 +4,12 @@ import { CiMenuFries } from "react-icons/ci";
 import logo from "../assets/kelvinMutugi.svg";
 import Hero from "./mainComponents/Hero";
 import MobileMenu from "./mainComponents/MobileMenu";
-import CustomScrollingLink from "./sharedComponents/CustomScrollLink";
+import { motion, useReducedMotion } from "framer-motion";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const reduceMotion = useReducedMotion();
   const toggleMenu = () => {
     setMenuOpen((prevState) => !prevState);
   };
@@ -50,30 +51,26 @@ function Header() {
             <CiMenuFries size="20" />
           </div>
           {menuOpen && (
-            <div className="absolute inset-0  h-screen bg-black-light bg-opacity-50 md:hidden">
+            <motion.div
+              initial={{
+                opacity: 0,
+                scale: reduceMotion ? 0 : 0.8,
+                x: 50,
+              }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              exit={{
+                opacity: 0,
+                scale: reduceMotion ? 1 : 0.8,
+                x: 50,
+              }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+              className="absolute inset-0  h-screen bg-black-light bg-opacity-50 md:hidden"
+            >
               <MobileMenu onClose={toggleMenu}></MobileMenu>
-            </div>
+            </motion.div>
           )}
 
           <ul className="hidden text-lg md:flex justify-evenly gap-8  ">
-            {/*  {[
-              { name: "Home", to: "hero-section" },
-              { name: "About", to: "about-section" },
-              { name: "Skills", to: "skills-section" },
-              { name: "Projects", to: "project-section" },
-            ].map((linkName) => (
-              <li key={linkName.name}>
-                <CustomScrollingLink
-                  to={linkName.to}
-                  activeClass={"active"}
-                  className={
-                    'className="text-md cursor-pointer hover:border-b-2 hover:border-b-green focus:border-b-2 focus:border-b-green  active:text-green'
-                  }
-                >
-                  {linkName.name}
-                </CustomScrollingLink>
-              </li>
-            ))} */}
             {[
               { name: "Home", to: "hero-section" },
               { name: "About", to: "about-section" },
